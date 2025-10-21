@@ -5,4 +5,4 @@ func play_idle_animation():
 
 
 func play_walk_animation():
-	%PlayerAnimations.play("run")
+	%PlayerAnimations.play("walk")

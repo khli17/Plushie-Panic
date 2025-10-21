@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bowixg3lglp5l"]
+[gd_scene load_steps=3 format=3 uid="uid://bowixg3lglp5l"]
 
-[ext_resource type="PackedScene" uid="uid://dr8go2x25b0sh" path="res://player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://dr8go2x25b0sh" path="res://Player/player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://d4mved3pthar7" path="res://Enemies/bunny_enemy.tscn" id="2_e2o6t"]
 
 [node name="Game" type="Node2D"]
 
@@ -10,6 +11,10 @@ layer = -30
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 offset_right = 1277.0
 offset_bottom = 734.0
+color = Color(0.633229, 0.60425144, 0.9763748, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_80nbo")]
 position = Vector2(-2, -3)
+
+[node name="Bunny_Enemy" parent="." instance=ExtResource("2_e2o6t")]
+position = Vector2(403, 98)
