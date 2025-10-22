@@ -62,7 +62,7 @@ height = 54.0
 [node name="Push_Weapon" type="Area2D"]
 script = ExtResource("1_3ewlt")
 
-[node name="Weapon" parent="." instance=ExtResource("2_quyu7")]
+[node name="WeaponManager" parent="." instance=ExtResource("2_quyu7")]
 unique_name_in_owner = true
 weapon_name = &"Push"
 weapon_level = 1

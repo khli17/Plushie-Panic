@@ -86,4 +86,5 @@ shape = SubResource("CircleShape2D_4flbx")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
-[node name="Push_Weapon" parent="." instance=ExtResource("5_k53q1")]
+[node name="Push_Weapon" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_k53q1")]
+player = NodePath("..")

@@ -1,6 +1,7 @@
 extends Area2D
 
-@onready var player = get_node("/root/Game/Player")
+@export var player = CharacterBody2D
+@export var Weapon : WeaponManager
 
 func _physics_process(delta):
 	%PushAnimations.play_attack_animation()

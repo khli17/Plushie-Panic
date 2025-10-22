@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm8wwfito3q3y"]
+
+[ext_resource type="Script" uid="uid://d0p2vfjsjafd2" path="res://Spawner.gd" id="1_00s5r"]
+[ext_resource type="PackedScene" uid="uid://d4mved3pthar7" path="res://Enemies/bunny_enemy.tscn" id="2_00s5r"]
+
+[node name="EnemySpawner" type="Node2D"]
+script = ExtResource("1_00s5r")
+enemy = ExtResource("2_00s5r")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI"]
+offset_left = 1232.0
+offset_top = 33.0
+offset_right = 1274.0
+offset_bottom = 73.0
+
+[node name="Minute" type="Label" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="Label2" type="Label" parent="UI/HBoxContainer"]
+layout_mode = 2
+text = ":"
+
+[node name="Second" type="Label" parent="UI/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "00"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Pattern" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="Elite" type="Timer" parent="."]
+wait_time = 9.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
