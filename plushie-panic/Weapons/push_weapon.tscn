@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=3 uid="uid://brhnunwd7rpex"]
+
+[ext_resource type="Script" uid="uid://cgbkwqydnt8u3" path="res://Weapons/push_weapon.gd" id="1_3ewlt"]
+[ext_resource type="Texture2D" uid="uid://c3123mqo0nrmt" path="res://Sprites/spr_push_strip6.png" id="1_up55t"]
+[ext_resource type="Script" uid="uid://dcke8f61d53k1" path="res://Weapons/push_animations.gd" id="2_3ewlt"]
+[ext_resource type="PackedScene" uid="uid://dwr20mk42cyg6" path="res://weapon_manager.tscn" id="2_quyu7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hrhw"]
+atlas = ExtResource("1_up55t")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01gtt"]
+atlas = ExtResource("1_up55t")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkjum"]
+atlas = ExtResource("1_up55t")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_engsc"]
+atlas = ExtResource("1_up55t")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lugc3"]
+atlas = ExtResource("1_up55t")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_de0tk"]
+atlas = ExtResource("1_up55t")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1a1e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hrhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01gtt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkjum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_engsc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lugc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_de0tk")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3ewlt"]
+radius = 19.0
+height = 54.0
+
+[node name="Push_Weapon" type="Area2D"]
+script = ExtResource("1_3ewlt")
+
+[node name="Weapon" parent="." instance=ExtResource("2_quyu7")]
+unique_name_in_owner = true
+weapon_name = &"Push"
+weapon_level = 1
+weapon_damage = 3.0
+weapon_speed = 1.0
+weapon_knockback = 1.0
+weapon_size = 1.0
+can_use = true
+
+[node name="PushAnimations" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_v1a1e")
+animation = &"attack"
+offset = Vector2(78, 0)
+script = ExtResource("2_3ewlt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(87, 5)
+shape = SubResource("CapsuleShape2D_3ewlt")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true

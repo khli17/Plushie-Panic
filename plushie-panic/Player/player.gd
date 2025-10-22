@@ -4,6 +4,8 @@ extends CharacterBody2D
 
 var health = 100.0
 var speed = 200.0
+var exp = 0.0
+var face_right : bool
 #code from tutorial will figure out how to implement
 func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down") #movement WASD
@@ -12,15 +14,19 @@ func _physics_process(delta):
 	
 	if velocity.x > 0:
 		$PlayerAnimations.flip_h = false
+		face_right = false
 	elif velocity.x < 0:
 		$PlayerAnimations.flip_h = true
+		face_right = true
 	
 	##plays walk animation
 	if velocity.length() > 0.0:
 		##gets access to node to get the animation
 		$PlayerAnimations.play_walk_animation()
+		
 	else: #plays idle animation
 		%PlayerAnimations.play_idle_animation()
+
 #
 	#const DAMAGE_RATE = 5.0
 	#var overlapping_mobs = %HurtBox.get_overlapping_bodies()

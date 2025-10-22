@@ -1,7 +1,8 @@
 extends CharacterBody2D
 
 var health = 3
-var speed = 100.0
+var damage = 2
+var speed = 50.0
 
 #makes sure nodes/children are created
 @onready var player = get_node("/root/Game/Player")
