@@ -8,10 +8,19 @@ var speed : float = 200.0
 var exp : float = 0.0
 var face_right : bool
 var isHurt : bool = false
+var nearest_enemy: CharacterBody2D
+var nearest_enemy_distance : float = INF
 
-#for movement
+
+
 func _physics_process(delta):
-	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down") #movement WASD
+	if nearest_enemy: #if nearest_enemy is not null, sotre its separation
+		nearest_enemy_distance = nearest_enemy.separation
+	else: #set default value
+		nearest_enemy_distance = INF
+		
+	#for movement
+	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down") #movement WASD or keys
 	velocity = direction * speed # move at direction of 600 pixels per sec
 	move_and_slide()
 	

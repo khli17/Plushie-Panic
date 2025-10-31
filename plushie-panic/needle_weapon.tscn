@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://j4rq8oc7jjhy"]
+
+[ext_resource type="Texture2D" uid="uid://s5dt6mtvsfns" path="res://Sprites/spr_needle.png" id="1_1xq2s"]
+[ext_resource type="Script" uid="uid://br2qgrilh57mc" path="res://needle_weapon.gd" id="1_fkj8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fkj8w"]
+size = Vector2(125, 7)
+
+[node name="Needle_Weapon" type="Area2D"]
+script = ExtResource("1_fkj8w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1xq2s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_fkj8w")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
