@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://yp7hwemcqcle"]
+[gd_scene load_steps=9 format=3 uid="uid://yp7hwemcqcle"]
 
+[ext_resource type="Script" uid="uid://b14fdyyouuh6y" path="res://Enemies/cat_enemy.gd" id="1_h4jm3"]
 [ext_resource type="Texture2D" uid="uid://bahonpspa3rxq" path="res://Sprites/spr_kitty_enemy_strip3.png" id="1_vgyck"]
+[ext_resource type="Script" uid="uid://dxqqktbejqt10" path="res://Enemies/cat_animations.gd" id="3_ygjqb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q3xiw"]
 atlas = ExtResource("1_vgyck")
@@ -31,10 +33,19 @@ animations = [{
 "speed": 6.0
 }]
 
-[node name="Cat_Enemy" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_oo6ym"]
+radius = 18.248287
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Cat_Enemy" type="CharacterBody2D"]
+script = ExtResource("1_h4jm3")
+
+[node name="CatAnimations" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_1yjwa")
 animation = &"walk"
-frame = 2
-frame_progress = 0.9037287
+frame = 1
+frame_progress = 0.02073417
+script = ExtResource("3_ygjqb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_oo6ym")

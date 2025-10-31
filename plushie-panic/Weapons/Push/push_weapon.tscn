@@ -1,8 +1,8 @@
 [gd_scene load_steps=13 format=3 uid="uid://brhnunwd7rpex"]
 
-[ext_resource type="Script" uid="uid://cgbkwqydnt8u3" path="res://Weapons/push_weapon.gd" id="1_3ewlt"]
+[ext_resource type="Script" uid="uid://cgbkwqydnt8u3" path="res://Weapons/Push/push_weapon.gd" id="1_3ewlt"]
 [ext_resource type="Texture2D" uid="uid://c3123mqo0nrmt" path="res://Sprites/spr_push_strip6.png" id="1_up55t"]
-[ext_resource type="Script" uid="uid://dcke8f61d53k1" path="res://Weapons/push_animations.gd" id="2_3ewlt"]
+[ext_resource type="Script" uid="uid://dcke8f61d53k1" path="res://Weapons/Push/push_animations.gd" id="2_3ewlt"]
 [ext_resource type="PackedScene" uid="uid://dwr20mk42cyg6" path="res://weapon_manager.tscn" id="2_quyu7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8hrhw"]
@@ -59,7 +59,7 @@ animations = [{
 radius = 19.0
 height = 54.0
 
-[node name="Push_Weapon" type="Area2D"]
+[node name="PushWeapon" type="Area2D"]
 script = ExtResource("1_3ewlt")
 
 [node name="WeaponManager" parent="." instance=ExtResource("2_quyu7")]

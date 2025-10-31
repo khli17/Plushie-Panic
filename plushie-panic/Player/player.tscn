@@ -1,10 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://dr8go2x25b0sh"]
+[gd_scene load_steps=30 format=3 uid="uid://dr8go2x25b0sh"]
 
 [ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://chc8elfjsro4j" path="res://Sprites/RiaRun.png" id="3_i3pqv"]
-[ext_resource type="Script" uid="uid://3ucaomt5j3m0" path="res://Player/player_animations.gd" id="4_hqtel"]
-[ext_resource type="PackedScene" uid="uid://brhnunwd7rpex" path="res://Weapons/push_weapon.tscn" id="5_k53q1"]
+[ext_resource type="Texture2D" uid="uid://c7aqpvb3fw1yn" path="res://Sprites/Rita rip3.png" id="3_vtle1"]
+[ext_resource type="Texture2D" uid="uid://2y5td5rq5f25" path="res://Sprites/Riadamanfewalk.png" id="4_fhl08"]
+[ext_resource type="Script" uid="uid://3ucaomt5j3m0" path="res://Player/player_2d_animation.gd" id="4_hqtel"]
+[ext_resource type="PackedScene" uid="uid://brhnunwd7rpex" path="res://Weapons/Push/push_weapon.tscn" id="5_k53q1"]
+[ext_resource type="Script" uid="uid://dl0bd1ns1l83b" path="res://Player/player_animations.gd" id="8_od3ui"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -16,6 +19,18 @@ region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
 atlas = ExtResource("1_4flbx")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apopc"]
+atlas = ExtResource("3_vtle1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5htga"]
+atlas = ExtResource("3_vtle1")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5o4e"]
+atlas = ExtResource("3_vtle1")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sweqy"]
@@ -32,6 +47,22 @@ region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
 atlas = ExtResource("3_i3pqv")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtle1"]
+atlas = ExtResource("4_fhl08")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_od3ui"]
+atlas = ExtResource("4_fhl08")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00tjw"]
+atlas = ExtResource("4_fhl08")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3vf3"]
+atlas = ExtResource("4_fhl08")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
@@ -52,6 +83,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_apopc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5htga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5o4e")
+}],
+"loop": true,
+"name": &"idle_damage",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_sweqy")
 }, {
 "duration": 1.0,
@@ -66,25 +111,197 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtle1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_od3ui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00tjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3vf3")
+}],
+"loop": true,
+"name": &"walk_damage",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
 radius = 20.880613
 
+[sub_resource type="Animation" id="Animation_00tjw"]
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player2DAnimation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player2DAnimation:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle"]
+}
+
+[sub_resource type="Animation" id="Animation_x3vf3"]
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player2DAnimation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player2DAnimation:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_damage"]
+}
+
+[sub_resource type="Animation" id="Animation_apopc"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player2DAnimation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player2DAnimation:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["walk"]
+}
+
+[sub_resource type="Animation" id="Animation_5htga"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player2DAnimation:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player2DAnimation:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["walk_damage"]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p5o4e"]
+_data = {
+&"idle": SubResource("Animation_00tjw"),
+&"idle_damage": SubResource("Animation_x3vf3"),
+&"walk": SubResource("Animation_apopc"),
+&"walk_damage": SubResource("Animation_5htga")
+}
+
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 129
+collision_mask = 129
 script = ExtResource("1_onrkg")
 
-[node name="PlayerAnimations" type="AnimatedSprite2D" parent="."]
+[node name="Player2DAnimation" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_sweqy")
 animation = &"walk"
 script = ExtResource("4_hqtel")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_4flbx")
-
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
-[node name="Push_Weapon" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_k53q1")]
+[node name="Weapon_Push" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_k53q1")]
 player = NodePath("..")
+
+[node name="HitBoxDamage" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="Collision" type="CollisionShape2D" parent="HitBoxDamage"]
+unique_name_in_owner = true
+light_mask = 0
+visibility_layer = 2
+shape = SubResource("CircleShape2D_4flbx")
+
+[node name="Health" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+offset_left = -29.0
+offset_top = -38.0
+offset_right = 35.0
+offset_bottom = -31.0
+value = 100.0
+show_percentage = false
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Collision2" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_4flbx")
+
+[node name="PlayerAnimations" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_p5o4e")
+}
+script = ExtResource("8_od3ui")
+
+[connection signal="body_entered" from="HitBoxDamage" to="." method="_on_hit_box_damage_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyManager" load_steps=3 format=3 uid="uid://bs7oc2kllrdnw"]
+
+[ext_resource type="PackedScene" uid="uid://yp7hwemcqcle" path="res://Enemies/cat_enemy.tscn" id="1_8a1vg"]
+[ext_resource type="Script" uid="uid://cn0sef5sc0yr7" path="res://test/enemy_manager.gd" id="2_bpekn"]
+
+[resource]
+script = ExtResource("2_bpekn")
+enemy_name = &"Cat"
+enemy_health = 35
+enemy_damage = 5
+enemy_speed = 60
+enemy = ExtResource("1_8a1vg")
+metadata/_custom_type_script = "uid://cn0sef5sc0yr7"

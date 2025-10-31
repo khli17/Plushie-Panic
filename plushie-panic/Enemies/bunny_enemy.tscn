@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://d4mved3pthar7"]
+[gd_scene load_steps=11 format=3 uid="uid://d4mved3pthar7"]
 
 [ext_resource type="Script" uid="uid://bgk2doud2m2jk" path="res://Enemies/bunny_enemy.gd" id="1_dtle2"]
 [ext_resource type="Texture2D" uid="uid://ccuhsxkpqxiir" path="res://Sprites/bunnyEnemy.png" id="1_vivkj"]
 [ext_resource type="Script" uid="uid://bnjb2waujw67w" path="res://Enemies/BunnyAnimations.gd" id="2_nk4wg"]
-[ext_resource type="PackedScene" uid="uid://cto0486oqyeey" path="res://enemy_manager.tscn" id="2_s351p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nk4wg"]
 atlas = ExtResource("1_vivkj")
@@ -52,14 +51,9 @@ animations = [{
 radius = 29.0
 
 [node name="Bunny_Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_dtle2")
-
-[node name="EnemyManager" parent="." instance=ExtResource("2_s351p")]
-unique_name_in_owner = true
-enemy_name = &"Bunny"
-enemy_health = 5
-enemy_damage = 2
-enemy_speed = 50
 
 [node name="BunnyAnimations" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
