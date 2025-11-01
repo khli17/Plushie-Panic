@@ -4,14 +4,14 @@ var direction : Vector2 = Vector2.RIGHT
 var speed : float = 200
 var damage :float = 1
 
+func _physics_process(delta):
+	position += direction * speed * delta
 
+#calls take_damage function if the interacting body has one
 func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.has_method("take_damage"):
+		body.take_damage(damage)
 
-
-func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
-	pass # Replace with function body.
-
-
+#when needle goes offstream, removes it
 func _on_screen_exited() -> void:
-	pass # Replace with function body.
+	queue_free()
