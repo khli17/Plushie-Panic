@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="NeedleShot" load_steps=4 format=3 uid="uid://d2akik40pdvc7"]
+
+[ext_resource type="PackedScene" uid="uid://j4rq8oc7jjhy" path="res://needle_weapon.tscn" id="1_imhjx"]
+[ext_resource type="Script" uid="uid://18rjpkbvym2w" path="res://needle_shot.gd" id="2_11mif"]
+[ext_resource type="Texture2D" uid="uid://coc7khls864um" path="res://Sprites/NeedleIcon.jpg" id="3_11mif"]
+
+[resource]
+script = ExtResource("2_11mif")
+name = "Needle"
+texture = ExtResource("3_11mif")
+damage = 5.0
+cooldown = 5.0
+speed = 5.0
+metadata/_custom_type_script = "uid://18rjpkbvym2w"

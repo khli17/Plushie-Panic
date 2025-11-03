@@ -7,6 +7,8 @@
 size = Vector2(125, 7)
 
 [node name="Needle_Weapon" type="Area2D"]
+light_mask = 0
+visibility_layer = 2
 script = ExtResource("1_fkj8w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
