@@ -8,6 +8,7 @@ class_name Enemy
 @export var Boss: PackedScene
 
 var distance : float = 400
+var can_spawn : bool = true
 
 var minute : int:
 	set(value):
@@ -23,15 +24,19 @@ var second : int:
 		%Second.text = str(second).lpad(2,'0')
 			
 ##for optimizing so spawner only spawns when blank amount of enemies 
-#func _physics_process(delta):
-	#if get_tree().get_node_count_in_group("Enemy") < 700:
-		#can_spawn = true
-	#else:
-		#can_spawn = false
+func _physics_process(delta):
+	if get_tree().get_node_count_in_group("Enemy") < 700:
+		can_spawn = true
+	else:
+		can_spawn = false
 	
 
 
 func spawn(position : Vector2):
+	if not can_spawn:
+		return
+		
+		
 	var enemy_instance = enemy.instantiate() #bunny
 	#if certain amount of time goes by, spawn certain enemies
 	
