@@ -44,6 +44,20 @@ func spawn(position : Vector2):
 	
 	get_tree().current_scene.add_child(enemy_instance)
 	
+## Determine which enemy to spawn based on time
+#func get_enemy_type_for_time() -> PackedScene:
+	#var total_seconds = minute * 60 + second
+	#
+	## Spawn different enemies based on elapsed time
+	#if total_seconds < 30:  # First 30 seconds - only bunnies
+		#return enemy
+	#elif total_seconds < 60:  # 30-60 seconds - enemy2
+		#return enemy2
+	#elif total_seconds < 120:  # 1-2 minutes - enemy3
+		#return enemy3
+	#else:  # After 2 minutes - mix of enemies or harder ones
+		#return enemy3  # Or randomize between types
+	
 func get_random_position() -> Vector2: 
 	return player.position + distance * Vector2.RIGHT.rotated(randf_range(0,2*PI))
 	
