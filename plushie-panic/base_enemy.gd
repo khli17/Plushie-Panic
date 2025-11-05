@@ -52,6 +52,7 @@ func knockback_update(delta):
 #enemy takes damage
 func take_damage(amount):
 	health -= amount
+	apply_damage_flash()
 	damage_popup(amount)
 	if health == 0:
 		queue_free()
@@ -62,3 +63,6 @@ func damage_popup(amount):
 	popup.text = str(amount)
 	popup.position = position + Vector2(-50,-25)
 	get_tree().current_scene.add_child(popup)
+	
+func apply_damage_flash():
+	pass
