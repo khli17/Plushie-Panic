@@ -2,8 +2,12 @@ extends Area2D
 
 var direction : Vector2 = Vector2.RIGHT
 var speed : float = 200
-var damage :float = 1
+var damage: float = 1
 
+#rotate needle
+func _ready():
+	rotation = direction.angle()
+	
 func _physics_process(delta):
 	position += direction * speed * delta
 

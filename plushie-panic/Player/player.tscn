@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dr8go2x25b0sh"]
+[gd_scene load_steps=33 format=3 uid="uid://dr8go2x25b0sh"]
 
 [ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://3ucaomt5j3m0" path="res://Player/player_2d_animation.gd" id="4_hqtel"]
 [ext_resource type="PackedScene" uid="uid://brhnunwd7rpex" path="res://Weapons/Push/push_weapon.tscn" id="5_k53q1"]
 [ext_resource type="Script" uid="uid://dl0bd1ns1l83b" path="res://Player/player_animations.gd" id="8_od3ui"]
+[ext_resource type="Texture2D" uid="uid://t6bky8myoubm" path="res://Sprites/Shadow.png" id="11_apopc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -279,7 +280,7 @@ layout_mode = 2
 [node name="Player2DAnimation" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_sweqy")
-animation = &"walk"
+animation = &"idle"
 script = ExtResource("4_hqtel")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -320,6 +321,9 @@ libraries = {
 &"": SubResource("AnimationLibrary_p5o4e")
 }
 script = ExtResource("8_od3ui")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("11_apopc")
 
 [connection signal="body_entered" from="HitBoxDamage" to="." method="_on_hit_box_damage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
