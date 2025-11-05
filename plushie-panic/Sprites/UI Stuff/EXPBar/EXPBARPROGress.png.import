@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cadr0n1m3w2qn"
-path="res://.godot/imported/EXPBAR.png-27863a5aa2aceddf46ce08f8e5aaf461.ctex"
+uid="uid://cjs34dqcuptug"
+path="res://.godot/imported/EXPBARPROGress.png-3e5c5e9ef783c1453b1e0547e7ad318d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/EXPBar/EXPBAR.png"
-dest_files=["res://.godot/imported/EXPBAR.png-27863a5aa2aceddf46ce08f8e5aaf461.ctex"]
+source_file="res://Sprites/UI Stuff/EXPBar/EXPBARPROGress.png"
+dest_files=["res://.godot/imported/EXPBARPROGress.png-3e5c5e9ef783c1453b1e0547e7ad318d.ctex"]
 
 [params]
 

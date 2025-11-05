@@ -19,6 +19,7 @@ var level : int = 1:
 	set(value):
 		level = value
 		%Level.text = "Lv. " + str(value)
+		%Upgrades.show_option()
 		
 		#for changing xp needed depending on level
 		if level >= 3:

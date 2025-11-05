@@ -1,20 +1,45 @@
-[gd_scene format=3 uid="uid://nejyfuud13df"]
+[gd_scene load_steps=4 format=3 uid="uid://nejyfuud13df"]
+
+[ext_resource type="Texture2D" uid="uid://dsg7vmos2f74f" path="res://Sprites/PushIcon.jpg" id="1_gswbp"]
+[ext_resource type="Script" uid="uid://cluswtusgj6sf" path="res://upgrade_slot.gd" id="2_kgmqt"]
+[ext_resource type="Texture2D" uid="uid://onxsqlre8yhu" path="res://Sprites/UI Stuff/Upgrade/GUIICON.jpg" id="3_22lli"]
 
 [node name="UpgradeSlot" type="TextureButton"]
+custom_minimum_size = Vector2(315, 35)
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Label2" type="Label" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+mouse_filter = 1
+texture_normal = ExtResource("1_gswbp")
+ignore_texture_size = true
+stretch_mode = 4
+script = ExtResource("2_kgmqt")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 50.0
+offset_top = 8.0
+offset_right = 90.0
+offset_bottom = 31.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85882354)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 8.0
+offset_right = 307.0
+offset_bottom = 31.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+show_behind_parent = true
+custom_minimum_size = Vector2(315, 40)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+texture = ExtResource("3_22lli")
+region_rect = Rect2(2.0123444, 2.0246916, 60.04938, 59.654316)
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
