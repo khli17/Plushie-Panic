@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7aqpvb3fw1yn"
-path="res://.godot/imported/RiaDamageIdle.png-8f4b267a4d427928de8e6f564a831d85.ctex"
+uid="uid://bahonpspa3rxq"
+path="res://.godot/imported/spr_kitty_enemy_strip3.png-1e96003c78ef3aaa55048d165e922f56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/RiaDamageIdle.png"
-dest_files=["res://.godot/imported/RiaDamageIdle.png-8f4b267a4d427928de8e6f564a831d85.ctex"]
+source_file="res://Sprites/Enemies/spr_kitty_enemy_strip3.png"
+dest_files=["res://.godot/imported/spr_kitty_enemy_strip3.png-1e96003c78ef3aaa55048d165e922f56.ctex"]
 
 [params]
 

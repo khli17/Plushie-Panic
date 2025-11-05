@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3123mqo0nrmt"
-path="res://.godot/imported/spr_push_strip6.png-14958e135f0c7967cfb44d7b68a1dc5f.ctex"
+uid="uid://gdmo5y47o51c"
+path="res://.godot/imported/Icon.jpg-0b8bf14bf3f3ebf15a17ffc25cf58503.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/spr_push_strip6.png"
-dest_files=["res://.godot/imported/spr_push_strip6.png-14958e135f0c7967cfb44d7b68a1dc5f.ctex"]
+source_file="res://Sprites/Misc/Icon.jpg"
+dest_files=["res://.godot/imported/Icon.jpg-0b8bf14bf3f3ebf15a17ffc25cf58503.ctex"]
 
 [params]
 

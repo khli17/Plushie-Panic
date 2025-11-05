@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gdmo5y47o51c"
-path="res://.godot/imported/Icon.jpg-b004a455c2b03690b865d3bac9a26cc2.ctex"
+uid="uid://ccuhsxkpqxiir"
+path="res://.godot/imported/bunnyEnemy.png-937340e8f1967bf86ad96b09a9cdd078.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Icon.jpg"
-dest_files=["res://.godot/imported/Icon.jpg-b004a455c2b03690b865d3bac9a26cc2.ctex"]
+source_file="res://Sprites/Enemies/bunnyEnemy.png"
+dest_files=["res://.godot/imported/bunnyEnemy.png-937340e8f1967bf86ad96b09a9cdd078.ctex"]
 
 [params]
 

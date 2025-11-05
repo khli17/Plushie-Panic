@@ -1,12 +1,12 @@
 [gd_scene load_steps=38 format=3 uid="uid://dr8go2x25b0sh"]
 
-[ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/RiaIdle.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/Player/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
 [ext_resource type="PackedScene" uid="uid://cwfe3l5oinkdv" path="res://slot.tscn" id="2_x3vf3"]
-[ext_resource type="Resource" uid="uid://d2akik40pdvc7" path="res://needle.tres" id="3_apopc"]
-[ext_resource type="Texture2D" uid="uid://chc8elfjsro4j" path="res://Sprites/RiaRun.png" id="3_i3pqv"]
-[ext_resource type="Texture2D" uid="uid://c7aqpvb3fw1yn" path="res://Sprites/RiaDamageIdle.png" id="3_vtle1"]
-[ext_resource type="Texture2D" uid="uid://2y5td5rq5f25" path="res://Sprites/RiaDamageRun.png" id="4_fhl08"]
+[ext_resource type="Resource" uid="uid://d2akik40pdvc7" path="res://Weapons/Weapon Resources/needle.tres" id="3_apopc"]
+[ext_resource type="Texture2D" uid="uid://chc8elfjsro4j" path="res://Sprites/Player/RiaRun.png" id="3_i3pqv"]
+[ext_resource type="Texture2D" uid="uid://c7aqpvb3fw1yn" path="res://Sprites/Player/RiaDamageIdle.png" id="3_vtle1"]
+[ext_resource type="Texture2D" uid="uid://2y5td5rq5f25" path="res://Sprites/Player/RiaDamageRun.png" id="4_fhl08"]
 [ext_resource type="Texture2D" uid="uid://c3mx7paci6ubv" path="res://Sprites/UI Stuff/EXPBar/EXPBARUNDER.png" id="4_gu6f8"]
 [ext_resource type="Script" uid="uid://3ucaomt5j3m0" path="res://Player/player_2d_animation.gd" id="4_hqtel"]
 [ext_resource type="Texture2D" uid="uid://cadr0n1m3w2qn" path="res://Sprites/UI Stuff/EXPBar/EXPBAR.png" id="5_dkpta"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cjs34dqcuptug" path="res://Sprites/UI Stuff/EXPBar/EXPBARPROGress.png" id="6_lfmf2"]
 [ext_resource type="Script" uid="uid://b7foi6r3t86kj" path="res://Player/options.gd" id="7_dkpta"]
 [ext_resource type="Script" uid="uid://dl0bd1ns1l83b" path="res://Player/player_animations.gd" id="8_od3ui"]
-[ext_resource type="Texture2D" uid="uid://t6bky8myoubm" path="res://Sprites/Shadow.png" id="11_apopc"]
+[ext_resource type="Texture2D" uid="uid://t6bky8myoubm" path="res://Sprites/Misc/Shadow.png" id="11_apopc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -301,7 +301,7 @@ offset_left = 1233.0
 offset_top = 54.0
 offset_right = 1273.0
 offset_bottom = 103.0
-text = "L. 1
+text = "Lvl. 1
 "
 
 [node name="Upgrades" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons")]

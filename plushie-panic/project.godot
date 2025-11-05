@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Plushie Panic"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://gdmo5y47o51c"
 
 [display]
 
@@ -28,7 +28,8 @@ enabled=PackedStringArray("res://addons/AS2P/plugin.cfg")
 folder_colors={
 "res://Enemies/": "red",
 "res://Player/": "pink",
-"res://Sprites/": "teal"
+"res://Sprites/": "teal",
+"res://Weapons/": "orange"
 }
 
 [input]

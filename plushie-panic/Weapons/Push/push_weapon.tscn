@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://brhnunwd7rpex"]
 
 [ext_resource type="Script" uid="uid://cgbkwqydnt8u3" path="res://Weapons/Push/push_weapon.gd" id="1_3ewlt"]
-[ext_resource type="Texture2D" uid="uid://c3123mqo0nrmt" path="res://Sprites/spr_push_strip6.png" id="1_up55t"]
+[ext_resource type="Texture2D" uid="uid://c3123mqo0nrmt" path="res://Sprites/Weapons/spr_push_strip6.png" id="1_up55t"]
 [ext_resource type="Script" uid="uid://dcke8f61d53k1" path="res://Weapons/Push/push_animations.gd" id="2_3ewlt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8hrhw"]

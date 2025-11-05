@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coc7khls864um"
-path="res://.godot/imported/NeedleIcon.jpg-130448a27252025be252d9208447e802.ctex"
+uid="uid://c7aqpvb3fw1yn"
+path="res://.godot/imported/RiaDamageIdle.png-912cd2bed2718d7f879fefb31ad44839.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/NeedleIcon.jpg"
-dest_files=["res://.godot/imported/NeedleIcon.jpg-130448a27252025be252d9208447e802.ctex"]
+source_file="res://Sprites/Player/RiaDamageIdle.png"
+dest_files=["res://.godot/imported/RiaDamageIdle.png-912cd2bed2718d7f879fefb31ad44839.ctex"]
 
 [params]
 

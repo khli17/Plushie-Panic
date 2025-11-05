@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://yp7hwemcqcle"]
 
-[ext_resource type="Script" uid="uid://b14fdyyouuh6y" path="res://Enemies/cat_enemy.gd" id="1_h4jm3"]
-[ext_resource type="Texture2D" uid="uid://bahonpspa3rxq" path="res://Sprites/spr_kitty_enemy_strip3.png" id="1_vgyck"]
-[ext_resource type="Script" uid="uid://dxqqktbejqt10" path="res://Enemies/cat_animations.gd" id="3_ygjqb"]
+[ext_resource type="Script" uid="uid://b14fdyyouuh6y" path="res://Enemies/Cat/cat_enemy.gd" id="1_h4jm3"]
+[ext_resource type="Texture2D" uid="uid://bahonpspa3rxq" path="res://Sprites/Enemies/spr_kitty_enemy_strip3.png" id="1_vgyck"]
+[ext_resource type="Script" uid="uid://dxqqktbejqt10" path="res://Enemies/Cat/cat_animations.gd" id="3_ygjqb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q3xiw"]
 atlas = ExtResource("1_vgyck")

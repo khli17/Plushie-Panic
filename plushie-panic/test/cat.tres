@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="EnemyManager" load_steps=3 format=3 uid="uid://cv47no6nywhc"]
 
-[ext_resource type="PackedScene" uid="uid://yp7hwemcqcle" path="res://Enemies/cat_enemy.tscn" id="1_ymfab"]
+[ext_resource type="PackedScene" uid="uid://yp7hwemcqcle" path="res://Enemies/Cat/cat_enemy.tscn" id="1_ymfab"]
 [ext_resource type="Script" uid="uid://cn0sef5sc0yr7" path="res://test/enemy_manager.gd" id="2_aa1va"]
 
 [resource]

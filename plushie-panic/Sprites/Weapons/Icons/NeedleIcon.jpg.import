@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chc8elfjsro4j"
-path="res://.godot/imported/RiaRun.png-d4954483f70d4c54acf222b793e1ec60.ctex"
+uid="uid://coc7khls864um"
+path="res://.godot/imported/NeedleIcon.jpg-da6da9dd4a60365299319442d958c5b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/RiaRun.png"
-dest_files=["res://.godot/imported/RiaRun.png-d4954483f70d4c54acf222b793e1ec60.ctex"]
+source_file="res://Sprites/Weapons/Icons/NeedleIcon.jpg"
+dest_files=["res://.godot/imported/NeedleIcon.jpg-da6da9dd4a60365299319442d958c5b1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccuhsxkpqxiir"
-path="res://.godot/imported/bunnyEnemy.png-5d2b083e8e6a6ed7405e425429133a0c.ctex"
+uid="uid://c3123mqo0nrmt"
+path="res://.godot/imported/spr_push_strip6.png-aac2825a4b3c2e260bab0f296ddd2901.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/bunnyEnemy.png"
-dest_files=["res://.godot/imported/bunnyEnemy.png-5d2b083e8e6a6ed7405e425429133a0c.ctex"]
+source_file="res://Sprites/Weapons/spr_push_strip6.png"
+dest_files=["res://.godot/imported/spr_push_strip6.png-aac2825a4b3c2e260bab0f296ddd2901.ctex"]
 
 [params]
 

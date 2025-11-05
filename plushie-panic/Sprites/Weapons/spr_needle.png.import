@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t6bky8myoubm"
-path="res://.godot/imported/Shadow.png-a7ccf17a29ec0fca81d1d01bfc54435a.ctex"
+uid="uid://s5dt6mtvsfns"
+path="res://.godot/imported/spr_needle.png-cce6794e0d9ce7d509cc950f2d605295.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Shadow.png"
-dest_files=["res://.godot/imported/Shadow.png-a7ccf17a29ec0fca81d1d01bfc54435a.ctex"]
+source_file="res://Sprites/Weapons/spr_needle.png"
+dest_files=["res://.godot/imported/spr_needle.png-cce6794e0d9ce7d509cc950f2d605295.ctex"]
 
 [params]
 

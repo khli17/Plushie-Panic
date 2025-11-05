@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgsu4te6luwgf"
-path="res://.godot/imported/RiaIdle.png-5b4ab64e84ccbb66ba16156399d5defe.ctex"
+uid="uid://t7qa8iom83oy"
+path="res://.godot/imported/ScissorsIcon.jpg-8ffb6d380a51d445da498c23423faaeb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/RiaIdle.png"
-dest_files=["res://.godot/imported/RiaIdle.png-5b4ab64e84ccbb66ba16156399d5defe.ctex"]
+source_file="res://Sprites/Weapons/Icons/ScissorsIcon.jpg"
+dest_files=["res://.godot/imported/ScissorsIcon.jpg-8ffb6d380a51d445da498c23423faaeb.ctex"]
 
 [params]
 

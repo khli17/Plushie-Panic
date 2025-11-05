@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://t7qa8iom83oy"
-path="res://.godot/imported/ScissorsIcon.jpg-f64c8b180c73c5bfada1e5a7f21d6da3.ctex"
+uid="uid://chc8elfjsro4j"
+path="res://.godot/imported/RiaRun.png-d8707035460ebfd5f7354fff010052a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ScissorsIcon.jpg"
-dest_files=["res://.godot/imported/ScissorsIcon.jpg-f64c8b180c73c5bfada1e5a7f21d6da3.ctex"]
+source_file="res://Sprites/Player/RiaRun.png"
+dest_files=["res://.godot/imported/RiaRun.png-d8707035460ebfd5f7354fff010052a6.ctex"]
 
 [params]
 

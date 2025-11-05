@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://nejyfuud13df"]
 
-[ext_resource type="Texture2D" uid="uid://dsg7vmos2f74f" path="res://Sprites/PushIcon.jpg" id="1_gswbp"]
+[ext_resource type="Texture2D" uid="uid://dsg7vmos2f74f" path="res://Sprites/Weapons/Icons/PushIcon.jpg" id="1_gswbp"]
 [ext_resource type="Script" uid="uid://cluswtusgj6sf" path="res://upgrade_slot.gd" id="2_kgmqt"]
 [ext_resource type="Texture2D" uid="uid://onxsqlre8yhu" path="res://Sprites/UI Stuff/Upgrade/GUIICON.jpg" id="3_22lli"]
 

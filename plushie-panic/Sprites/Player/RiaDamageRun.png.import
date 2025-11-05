@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2y5td5rq5f25"
-path="res://.godot/imported/RiaDamageRun.png-7c0a7fa9adb1cffffa612b379a96eaa5.ctex"
+path="res://.godot/imported/RiaDamageRun.png-3b843712af97efedeec67dae8516477c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/RiaDamageRun.png"
-dest_files=["res://.godot/imported/RiaDamageRun.png-7c0a7fa9adb1cffffa612b379a96eaa5.ctex"]
+source_file="res://Sprites/Player/RiaDamageRun.png"
+dest_files=["res://.godot/imported/RiaDamageRun.png-3b843712af97efedeec67dae8516477c.ctex"]
 
 [params]
 
