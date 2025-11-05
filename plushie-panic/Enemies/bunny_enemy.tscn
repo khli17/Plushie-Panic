@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://d4mved3pthar7"]
+[gd_scene load_steps=13 format=3 uid="uid://d4mved3pthar7"]
 
 [ext_resource type="Script" uid="uid://bgk2doud2m2jk" path="res://Enemies/bunny_enemy.gd" id="1_dtle2"]
 [ext_resource type="Texture2D" uid="uid://ccuhsxkpqxiir" path="res://Sprites/bunnyEnemy.png" id="1_vivkj"]
+[ext_resource type="Script" uid="uid://beiuosfkiwuba" path="res://PickupResource.gd" id="2_3hox3"]
 [ext_resource type="Script" uid="uid://bnjb2waujw67w" path="res://Enemies/BunnyAnimations.gd" id="2_nk4wg"]
+[ext_resource type="Resource" uid="uid://dkysxlr8rgbju" path="res://greenbutton.tres" id="3_x2sx8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nk4wg"]
 atlas = ExtResource("1_vivkj")
@@ -54,6 +56,7 @@ radius = 29.0
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_dtle2")
+drops = Array[ExtResource("2_3hox3")]([ExtResource("3_x2sx8")])
 
 [node name="BunnyAnimations" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

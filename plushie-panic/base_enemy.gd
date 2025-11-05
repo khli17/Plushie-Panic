@@ -2,13 +2,23 @@ extends CharacterBody2D
 class_name BaseEnemy
 
 var damage_popup_node = preload("res://damage.tscn")
-var health = 3
+var health : float:
+	set(value):
+		health = value
+		if health <= 0:
+			drop_item()
+			queue_free()
 var damage = 2
 var speed = 50.0
 var is_damage : bool = false
 var knockback : Vector2
 var separation : float
+var drop = preload("res://pickups.tscn")
+
+@export var drops : Array[Pickups]
+
 @onready var player = get_node("/root/Game/Player")
+
 
 func play_walk():
 	pass
@@ -51,11 +61,11 @@ func knockback_update(delta):
 
 #enemy takes damage
 func take_damage(amount):
-	health -= amount
 	apply_damage_flash()
 	damage_popup(amount)
-	if health == 0:
-		queue_free()
+	health -= amount
+	#if health <= 0:
+		#queue_free()
 
 #instantiate damage popup and add to scene tree
 func damage_popup(amount):
@@ -63,6 +73,20 @@ func damage_popup(amount):
 	popup.text = str(amount)
 	popup.position = position + Vector2(-50,-25)
 	get_tree().current_scene.add_child(popup)
+	
+func drop_item():
+	#for no item to drop
+	if drops.size() == 0:
+		return
+		
+	var item = drops.pick_random()
+	var item_to_drop = drop.instantiate()
+	
+	item_to_drop.type = item
+	item_to_drop.position = position
+	item_to_drop.player_reference = player
+	
+	get_tree().current_scene.call_deferred("add_child", item_to_drop)
 	
 func apply_damage_flash():
 	pass

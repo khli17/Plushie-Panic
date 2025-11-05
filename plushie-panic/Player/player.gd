@@ -5,16 +5,31 @@ var health : float = 100.0:
 		health = value
 		%Health.value = value
 var speed : float = 200.0
-var exp : float = 0.0
 var face_right : bool
 var isHurt : bool = false
 var nearest_enemy: CharacterBody2D
 var nearest_enemy_distance : float = INF
 
+var EXP : int = 0:
+	set(value):
+		EXP = value
+		%EXP.value = value
+var total_EXP : int = 0
+var level : int = 1:
+	set(value):
+		level = value
+		%Level.text = "Lv. " + str(value)
+		
+		#for changing xp needed depending on level
+		if level >= 3:
+			%EXP.max_value = 20
+		elif level >= 7:
+			%EXP.max_value = 40
+
 
 
 func _physics_process(delta):
-	if nearest_enemy: #if nearest_enemy is not null, sotre its separation
+	if is_instance_valid(nearest_enemy): #if nearest_enemy is not null, sotre its separation
 		nearest_enemy_distance = nearest_enemy.separation
 	else: #set default value
 		nearest_enemy_distance = INF
@@ -23,6 +38,7 @@ func _physics_process(delta):
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down") #movement WASD or keys
 	velocity = direction * speed # move at direction of 600 pixels per sec
 	move_and_slide()
+	check_EXP()
 	
 	#flips player to face correct direction
 	if velocity.x > 0:
@@ -63,3 +79,18 @@ func _on_timer_timeout() -> void:
 	%Collision.set_deferred("disabled", true)
 	%Collision.set_deferred("disabled", false)
 	
+#exp function
+func gain_EXP(amount):
+	EXP += amount
+	total_EXP += amount
+	
+#check EXp and increase level
+func check_EXP():
+	if EXP > %EXP.max_value:
+		EXP -= %EXP.max_value
+		level += 1
+
+
+func _on_magnet_area_entered(area):
+	if area.has_method("follow"):
+		area.follow(self)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dr8go2x25b0sh"]
+[gd_scene load_steps=37 format=3 uid="uid://dr8go2x25b0sh"]
 
 [ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
@@ -7,8 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://chc8elfjsro4j" path="res://Sprites/RiaRun.png" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://c7aqpvb3fw1yn" path="res://Sprites/RiaDamageIdle.png" id="3_vtle1"]
 [ext_resource type="Texture2D" uid="uid://2y5td5rq5f25" path="res://Sprites/RiaDamageRun.png" id="4_fhl08"]
+[ext_resource type="Texture2D" uid="uid://c3mx7paci6ubv" path="res://Sprites/EXPBar/EXPBARUNDER.png" id="4_gu6f8"]
 [ext_resource type="Script" uid="uid://3ucaomt5j3m0" path="res://Player/player_2d_animation.gd" id="4_hqtel"]
+[ext_resource type="Texture2D" uid="uid://cadr0n1m3w2qn" path="res://Sprites/EXPBar/EXPBAR.png" id="5_dkpta"]
 [ext_resource type="PackedScene" uid="uid://brhnunwd7rpex" path="res://Weapons/Push/push_weapon.tscn" id="5_k53q1"]
+[ext_resource type="Texture2D" uid="uid://cjs34dqcuptug" path="res://Sprites/EXPBar/EXPBARPROGress.png" id="6_lfmf2"]
 [ext_resource type="Script" uid="uid://dl0bd1ns1l83b" path="res://Player/player_animations.gd" id="8_od3ui"]
 [ext_resource type="Texture2D" uid="uid://t6bky8myoubm" path="res://Sprites/Shadow.png" id="11_apopc"]
 
@@ -256,6 +259,8 @@ _data = {
 &"walk_damage": SubResource("Animation_5htga")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gu6f8"]
+
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 129
 collision_mask = 129
@@ -264,8 +269,10 @@ script = ExtResource("1_onrkg")
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Weapons" type="HBoxContainer" parent="UI"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 133.0
+offset_bottom = 100.0
 
 [node name="Slot" parent="UI/Weapons" instance=ExtResource("2_x3vf3")]
 layout_mode = 2
@@ -276,6 +283,24 @@ layout_mode = 2
 
 [node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_x3vf3")]
 layout_mode = 2
+
+[node name="EXP" type="TextureProgressBar" parent="UI"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture_under = ExtResource("4_gu6f8")
+texture_over = ExtResource("5_dkpta")
+texture_progress = ExtResource("6_lfmf2")
+
+[node name="Level" type="Label" parent="UI/EXP"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1233.0
+offset_top = 54.0
+offset_right = 1273.0
+offset_bottom = 103.0
+text = "L. 1
+"
 
 [node name="Player2DAnimation" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
@@ -325,5 +350,15 @@ script = ExtResource("8_od3ui")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("11_apopc")
 
+[node name="Magnet" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Magnet"]
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_gu6f8")
+debug_color = Color(0.28235295, 1, 0.5019608, 0.41960785)
+
 [connection signal="body_entered" from="HitBoxDamage" to="." method="_on_hit_box_damage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="Magnet" to="." method="_on_magnet_area_entered"]

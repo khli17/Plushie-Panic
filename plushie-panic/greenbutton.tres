@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ButtonEXP" load_steps=3 format=3 uid="uid://dkysxlr8rgbju"]
+
+[ext_resource type="Texture2D" uid="uid://do3l186xm2ewq" path="res://Sprites/ButtonEXP.png" id="1_2nkqd"]
+[ext_resource type="Script" uid="uid://dbi02elsl47py" path="res://ButtonEXP.gd" id="2_6qfq2"]
+
+[resource]
+script = ExtResource("2_6qfq2")
+EXP = 2.0
+title = "Green Button"
+icon = ExtResource("1_2nkqd")
+description = "Gains Experience Points"
+metadata/_custom_type_script = "uid://dbi02elsl47py"
