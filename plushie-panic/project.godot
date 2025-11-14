@@ -27,6 +27,7 @@ enabled=PackedStringArray("res://addons/AS2P/plugin.cfg")
 
 folder_colors={
 "res://Enemies/": "red",
+"res://Items/": "purple",
 "res://Player/": "pink",
 "res://Sprites/": "teal",
 "res://Weapons/": "orange"

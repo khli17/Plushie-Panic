@@ -2,13 +2,27 @@ extends CharacterBody2D
 
 var health : float = 100.0:
 	set(value):
-		health = value
+		health = max(value, 0)
 		%Health.value = value
-var speed : float = 200.0
+var movement_speed : float = 200.0
+var max_health : float = 100 : 
+	set(value): 
+		max_health = value
+		%Health.max_value = value
+var recovery : float = 0
+var armor : float = 0
+var might : float = 1.0
+var area : float = 50
+var magnet : float = 0:
+	set(value):
+		magnet = value
+		%Magnet.shape.radius = 50 + value
+var growth : float = 1
+
 var face_right : bool
 var isHurt : bool = false
 var nearest_enemy: CharacterBody2D
-var nearest_enemy_distance : float = INF
+var nearest_enemy_distance : float = 150 + area
 
 var EXP : int = 0:
 	set(value):
@@ -27,19 +41,18 @@ var level : int = 1:
 		elif level >= 7:
 			%EXP.max_value = 40
 
-
-
 func _physics_process(delta):
 	if is_instance_valid(nearest_enemy): #if nearest_enemy is not null, sotre its separation
 		nearest_enemy_distance = nearest_enemy.separation
 	else: #set default value
-		nearest_enemy_distance = INF
-		
+		nearest_enemy_distance = 150 * area
+		nearest_enemy = null
 	#for movement
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down") #movement WASD or keys
-	velocity = direction * speed # move at direction of 600 pixels per sec
+	velocity = direction * movement_speed # move at direction of 600 pixels per sec
 	move_and_slide()
 	check_EXP()
+	health += recovery * delta #increase health with recovery * delta
 	
 	#flips player to face correct direction
 	if velocity.x > 0:
@@ -61,7 +74,7 @@ func _physics_process(delta):
 		%PlayerAnimations.play_idle_animation()
 		
 func take_damage(amount):
-	health-=amount
+	health-= max(amount - armor, 0)
 	isHurt = true
 	if velocity.length() > 0.0:
 		%PlayerAnimations.play_walk_hurt()
@@ -82,8 +95,8 @@ func _on_timer_timeout() -> void:
 	
 #exp function
 func gain_EXP(amount):
-	EXP += amount
-	total_EXP += amount
+	EXP += amount * growth
+	total_EXP += amount * growth
 	
 #check EXp and increase level
 func check_EXP():

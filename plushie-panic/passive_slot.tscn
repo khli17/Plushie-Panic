@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bqum5w8j2xeji"]
+
+[node name="PassiveSlot" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5

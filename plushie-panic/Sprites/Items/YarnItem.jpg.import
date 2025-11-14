@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do3l186xm2ewq"
-path="res://.godot/imported/ButtonEXP.png-e353409e971de96e46f8dafce116dcf6.ctex"
+uid="uid://de3bc7p4ov1k7"
+path="res://.godot/imported/YarnItem.jpg-b06bbb2f5b2d480530c8548d4388a195.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ButtonEXP.png"
-dest_files=["res://.godot/imported/ButtonEXP.png-e353409e971de96e46f8dafce116dcf6.ctex"]
+source_file="res://Sprites/Items/YarnItem.jpg"
+dest_files=["res://.godot/imported/YarnItem.jpg-b06bbb2f5b2d480530c8548d4388a195.ctex"]
 
 [params]
 

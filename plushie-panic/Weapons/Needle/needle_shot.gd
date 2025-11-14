@@ -11,6 +11,7 @@ func shoot(source, target, scene_tree):
 	needle.position = source.position
 	needle.damage = damage
 	needle.speed = speed
+	needle.source = source
 	needle.direction = (target.position - source.position).normalized()
 	
 	#adding to scene tree

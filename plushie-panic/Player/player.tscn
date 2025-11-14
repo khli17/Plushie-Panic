@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/Player/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://bo1ilqr62wo8m" path="res://Sprites/UIPanel.jpg" id="2_lfmf2"]
+[ext_resource type="Texture2D" uid="uid://bo1ilqr62wo8m" path="res://Sprites/UI Stuff/UIPanel.jpg" id="2_lfmf2"]
 [ext_resource type="PackedScene" uid="uid://cwfe3l5oinkdv" path="res://slot.tscn" id="2_x3vf3"]
 [ext_resource type="Resource" uid="uid://d2akik40pdvc7" path="res://Weapons/Weapon Resources/needle.tres" id="3_apopc"]
 [ext_resource type="Texture2D" uid="uid://chc8elfjsro4j" path="res://Sprites/Player/RiaRun.png" id="3_i3pqv"]
@@ -403,7 +403,8 @@ texture = ExtResource("11_apopc")
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Magnet"]
+[node name="Magnet" type="CollisionShape2D" parent="Magnet"]
+unique_name_in_owner = true
 scale = Vector2(5, 5)
 shape = SubResource("CircleShape2D_gu6f8")
 debug_color = Color(0.28235295, 1, 0.5019608, 0.41960785)

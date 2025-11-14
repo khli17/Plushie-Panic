@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo1ilqr62wo8m"
-path="res://.godot/imported/UIPanel.jpg-5c1ca43ce6b9dbf403e92d4cfb204f01.ctex"
+uid="uid://bp2gv786ugxrd"
+path="res://.godot/imported/SatchelItem.jpg-7ab39f758beb5f849184086be00ad8bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UIPanel.jpg"
-dest_files=["res://.godot/imported/UIPanel.jpg-5c1ca43ce6b9dbf403e92d4cfb204f01.ctex"]
+source_file="res://Sprites/Items/SatchelItem.jpg"
+dest_files=["res://.godot/imported/SatchelItem.jpg-7ab39f758beb5f849184086be00ad8bd.ctex"]
 
 [params]
 
