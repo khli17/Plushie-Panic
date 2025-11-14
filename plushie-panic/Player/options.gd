@@ -1,6 +1,7 @@
 extends VBoxContainer
 
 @export var weapons : HBoxContainer
+@export var passive_items : HBoxContainer
 var UpgradeSlot = preload("res://upgrade_slot.tscn")
 
 @export var panel : NinePatchRect
@@ -14,6 +15,23 @@ func close_option():
 	panel.hide()
 	get_tree().paused = false
 
+#function to extract resource from slot present in container
+func get_available_resource_in(items)-> Array[Item]:
+	var resources : Array[Item] = []
+	for item in items.get_children():
+		if item.item != null:
+			resources.append(item.item)
+	return resources
+	
+#add upgrade option with item resource	
+func ad_option(item) -> int:
+	if item.is_upgradeable():
+		var option_slot = UpgradeSlot.instantiate()
+		option_slot.item = item
+		add_child(option_slot)
+		return 1
+	return 0
+
 #traverse through weapons and store available weapon resource	
 func get_available_weapons():
 	var weapon_resource = []
@@ -21,8 +39,7 @@ func get_available_weapons():
 		if weapon.weapon != null:
 			weapon_resource.append(weapon.weapon)
 	return weapon_resource
-	
-	
+
 	
 func show_option():
 	var weapons_available = get_available_weapons()
