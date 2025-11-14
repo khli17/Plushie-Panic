@@ -3,11 +3,15 @@ extends VBoxContainer
 @export var weapons : HBoxContainer
 var UpgradeSlot = preload("res://upgrade_slot.tscn")
 
+@export var panel : NinePatchRect
+
 func _ready():
 	hide()
+	panel.hide()
 	
 func close_option():
 	hide()
+	panel.hide()
 	get_tree().paused = false
 
 #traverse through weapons and store available weapon resource	
@@ -42,4 +46,5 @@ func show_option():
 		return
 		
 	show()
+	panel.show()
 	get_tree().paused = true

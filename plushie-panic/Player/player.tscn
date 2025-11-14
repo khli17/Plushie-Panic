@@ -1,7 +1,8 @@
-[gd_scene load_steps=38 format=3 uid="uid://dr8go2x25b0sh"]
+[gd_scene load_steps=39 format=3 uid="uid://dr8go2x25b0sh"]
 
 [ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/Player/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://bo1ilqr62wo8m" path="res://Sprites/UIPanel.jpg" id="2_lfmf2"]
 [ext_resource type="PackedScene" uid="uid://cwfe3l5oinkdv" path="res://slot.tscn" id="2_x3vf3"]
 [ext_resource type="Resource" uid="uid://d2akik40pdvc7" path="res://Weapons/Weapon Resources/needle.tres" id="3_apopc"]
 [ext_resource type="Texture2D" uid="uid://chc8elfjsro4j" path="res://Sprites/Player/RiaRun.png" id="3_i3pqv"]
@@ -269,6 +270,34 @@ script = ExtResource("1_onrkg")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
+[node name="Panel" type="NinePatchRect" parent="UI"]
+process_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -451.5
+offset_top = -239.0
+offset_right = 451.5
+offset_bottom = 239.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lfmf2")
+
+[node name="Label" type="Label" parent="UI/Panel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.5
+offset_top = 23.0
+offset_right = 93.5
+offset_bottom = 78.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "LEVEL UP"
+
 [node name="Weapons" type="HBoxContainer" parent="UI"]
 offset_left = 5.0
 offset_top = 60.0
@@ -304,7 +333,7 @@ offset_bottom = 103.0
 text = "Lvl. 1
 "
 
-[node name="Upgrades" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons")]
+[node name="Upgrades" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons", "panel")]
 unique_name_in_owner = true
 process_mode = 3
 anchors_preset = 8
@@ -320,6 +349,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("7_dkpta")
 weapons = NodePath("../Weapons")
+panel = NodePath("../Panel")
 
 [node name="Player2DAnimation" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
