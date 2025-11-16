@@ -8,6 +8,11 @@ class_name Weapon
 @export var needle_node : PackedScene = preload("res://Weapons/Needle/needle_weapon.tscn")
 
 @export var upgrades : Array[Upgrade]
+#for evolution
+@export var item_needed : PassiveItem
+@export var evolution : Weapon
+
+var slot
 
 func activate(_source, _target, _scene_tree):
 	pass
@@ -29,4 +34,9 @@ func upgrade_item():
 	speed += upgrade.speed
 	
 	level += 1
+	
+func max_level_reached():
+	if upgrades.size() +1 == level and upgrades.size() != 0:
+		return true
+	return false
 	

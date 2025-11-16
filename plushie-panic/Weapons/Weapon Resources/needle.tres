@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="NeedleShot" load_steps=11 format=3 uid="uid://d2akik40pdvc7"]
+[gd_resource type="Resource" script_class="NeedleShot" load_steps=12 format=3 uid="uid://d2akik40pdvc7"]
 
+[ext_resource type="Resource" uid="uid://iu14vwevq63h" path="res://TripleNeedle.tres" id="1_1n2s5"]
 [ext_resource type="PackedScene" uid="uid://j4rq8oc7jjhy" path="res://Weapons/Needle/needle_weapon.tscn" id="1_altkx"]
 [ext_resource type="Script" uid="uid://18rjpkbvym2w" path="res://Weapons/Needle/needle_shot.gd" id="2_1n2s5"]
 [ext_resource type="Texture2D" uid="uid://coc7khls864um" path="res://Sprites/Weapons/Icons/NeedleIcon.jpg" id="3_qu8mr"]
@@ -38,10 +39,10 @@ metadata/_custom_type_script = "uid://b24ki5ik8780h"
 
 [resource]
 script = ExtResource("2_1n2s5")
-name = "Needle"
-texture = ExtResource("3_qu8mr")
 damage = 5.0
 cooldown = 2.5
 speed = 400.0
 upgrades = Array[ExtResource("4_6b5vq")]([SubResource("Resource_d728y"), SubResource("Resource_d8h7j"), SubResource("Resource_c1xyi"), SubResource("Resource_rp84t"), SubResource("Resource_7iehv")])
+evolution = ExtResource("1_1n2s5")
+texture = ExtResource("3_qu8mr")
 metadata/_custom_type_script = "uid://18rjpkbvym2w"

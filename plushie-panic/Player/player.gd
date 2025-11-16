@@ -72,7 +72,7 @@ func _physics_process(delta):
 		
 	else: #plays idle animation
 		%PlayerAnimations.play_idle_animation()
-		
+	
 func take_damage(amount):
 	health-= max(amount - armor, 0)
 	isHurt = true

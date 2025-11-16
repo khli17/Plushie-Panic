@@ -238,10 +238,10 @@ sources/1 = SubResource("TileSetAtlasSource_7jktm")
 texture = ExtResource("1_fc0e3")
 0:0/size_in_atlas = Vector2i(3, 4)
 0:0/0 = 0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 7.90263, 22.578957, -8.46711, 22.578957)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 7.3285103, 24.215939, -8.603029, 23.578674)
 8:0/size_in_atlas = Vector2i(3, 4)
 8:0/0 = 0
-8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 7.90263, 22.578957, -8.46711, 22.578957)
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8.603031, 24.215939, -8.603029, 23.578674)
 0:4/0 = 0
 1:4/0 = 0
 3:4/0 = 0
@@ -260,7 +260,7 @@ texture = ExtResource("1_fc0e3")
 7:6/0 = 0
 0:8/size_in_atlas = Vector2i(3, 4)
 0:8/0 = 0
-0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 7.90263, 22.578957, -8.46711, 22.578957)
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8.284401, 23.897308, -8.603029, 24.534569)
 4:13/size_in_atlas = Vector2i(1, 2)
 4:13/0 = 0
 3:12/0 = 0
@@ -300,7 +300,7 @@ texture = ExtResource("1_fc0e3")
 0:7/0 = 0
 8:8/size_in_atlas = Vector2i(3, 4)
 8:8/0 = 0
-8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 7.90263, 22.578957, -8.46711, 22.578957)
+8:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, 8, 8.603031, 24.215939, -8.603029, 24.534569)
 12:13/size_in_atlas = Vector2i(1, 2)
 12:13/0 = 0
 14:14/0 = 0
@@ -357,8 +357,7 @@ color = Color(0.633229, 0.60425144, 0.9763748, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_80nbo")]
 position = Vector2(425, 252)
-collision_layer = 1
-collision_mask = 1
 
 [node name="EnemySpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_feb5d")]
+visible = false
 player = NodePath("../Player")
