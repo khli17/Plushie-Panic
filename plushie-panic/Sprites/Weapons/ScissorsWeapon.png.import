@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb84glaiot8ac"
-path="res://.godot/imported/ScissorsWeapon.png-e9570f2b502807c258acbe9a11aff646.ctex"
+path="res://.godot/imported/ScissorsWeapon.png-b1c89f72e64280a844378986c02bb2ea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ScissorsWeapon.png"
-dest_files=["res://.godot/imported/ScissorsWeapon.png-e9570f2b502807c258acbe9a11aff646.ctex"]
+source_file="res://Sprites/Weapons/ScissorsWeapon.png"
+dest_files=["res://.godot/imported/ScissorsWeapon.png-b1c89f72e64280a844378986c02bb2ea.ctex"]
 
 [params]
 

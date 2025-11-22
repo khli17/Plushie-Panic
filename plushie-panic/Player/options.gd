@@ -54,6 +54,12 @@ func show_option():
 	for weapon in weapons_available:
 		upgrade_size += add_option(weapon)
 		
+		if weapon.max_level_reached() and weapon.item_needed in passive_item_available:
+			var option_slot = UpgradeSlot.instantiate()
+			option_slot.item = weapon #triggers evolution
+			add_child(option_slot)
+			upgrade_size += 1
+		
 	for passive_item in passive_item_available:
 		upgrade_size += add_option(passive_item)
 	

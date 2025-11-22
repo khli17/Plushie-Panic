@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwo1r6s8qtjsx"
-path="res://.godot/imported/BunnyEnemy2.png-7c451eb084322301178699db5df2ce64.ctex"
+uid="uid://bt47406b0c4su"
+path="res://.godot/imported/DogEnemy.png-ba76c3062676334e7e133525bf3f49d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/BunnyEnemy2.png"
-dest_files=["res://.godot/imported/BunnyEnemy2.png-7c451eb084322301178699db5df2ce64.ctex"]
+source_file="res://Sprites/Enemies/DogEnemy.png"
+dest_files=["res://.godot/imported/DogEnemy.png-ba76c3062676334e7e133525bf3f49d7.ctex"]
 
 [params]
 

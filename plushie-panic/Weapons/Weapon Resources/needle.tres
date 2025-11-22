@@ -1,11 +1,11 @@
-[gd_resource type="Resource" script_class="NeedleShot" load_steps=12 format=3 uid="uid://d2akik40pdvc7"]
+[gd_resource type="Resource" script_class="ProjectileShot" load_steps=12 format=3 uid="uid://d2akik40pdvc7"]
 
-[ext_resource type="Resource" uid="uid://iu14vwevq63h" path="res://TripleNeedle.tres" id="1_1n2s5"]
+[ext_resource type="Resource" uid="uid://cjgocfvnybda8" path="res://TripleNeedleWeapon.tres" id="1_1n2s5"]
 [ext_resource type="PackedScene" uid="uid://j4rq8oc7jjhy" path="res://Weapons/Needle/needle_weapon.tscn" id="1_altkx"]
-[ext_resource type="Script" uid="uid://18rjpkbvym2w" path="res://Weapons/Needle/needle_shot.gd" id="2_1n2s5"]
+[ext_resource type="Script" uid="uid://18rjpkbvym2w" path="res://Weapons/Needle/projectile_shot.gd" id="3_6b5vq"]
 [ext_resource type="Texture2D" uid="uid://coc7khls864um" path="res://Sprites/Weapons/Icons/NeedleIcon.jpg" id="3_qu8mr"]
 [ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Upgrade.gd" id="4_6b5vq"]
-[ext_resource type="Script" uid="uid://b24ki5ik8780h" path="res://Weapons/Needle/NeedleUpgrade.gd" id="5_maol2"]
+[ext_resource type="Script" uid="uid://b24ki5ik8780h" path="res://Weapons/Weapon Upgrades/ProjectileUpgrade.gd" id="5_maol2"]
 
 [sub_resource type="Resource" id="Resource_d728y"]
 script = ExtResource("5_maol2")
@@ -38,7 +38,7 @@ description = "-0.1s Cooldown"
 metadata/_custom_type_script = "uid://b24ki5ik8780h"
 
 [resource]
-script = ExtResource("2_1n2s5")
+script = ExtResource("3_6b5vq")
 damage = 5.0
 cooldown = 2.5
 speed = 400.0

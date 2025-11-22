@@ -1,7 +1,7 @@
 extends BaseEnemy
 
 func _ready():
-	health = 15;
+	health = 10;
 	damage = 2
 	speed = 50
 	%BunnyAnimations.play_walk()

@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://dygvxdpt3lauf"]
+
+[ext_resource type="Texture2D" uid="uid://bt47406b0c4su" path="res://Sprites/Enemies/DogEnemy.png" id="1_sr0n8"]
+[ext_resource type="Script" uid="uid://bw8hjuc56shjm" path="res://Enemies/dog_animations.gd" id="2_ydcog"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydcog"]
+atlas = ExtResource("1_sr0n8")
+region = Rect2(0, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql22x"]
+atlas = ExtResource("1_sr0n8")
+region = Rect2(128, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi17m"]
+atlas = ExtResource("1_sr0n8")
+region = Rect2(256, 0, 128, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lka1"]
+atlas = ExtResource("1_sr0n8")
+region = Rect2(384, 0, 128, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hiuft"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydcog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ql22x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vi17m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lka1")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sr0n8"]
+radius = 27.0
+height = 110.0
+
+[node name="Dog_Enemy" type="CharacterBody2D"]
+
+[node name="DogAnimations" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_hiuft")
+animation = &"walk"
+frame_progress = 0.81563884
+script = ExtResource("2_ydcog")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_sr0n8")

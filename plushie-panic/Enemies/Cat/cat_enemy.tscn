@@ -1,36 +1,36 @@
 [gd_scene load_steps=9 format=3 uid="uid://yp7hwemcqcle"]
 
 [ext_resource type="Script" uid="uid://b14fdyyouuh6y" path="res://Enemies/Cat/cat_enemy.gd" id="1_h4jm3"]
-[ext_resource type="Texture2D" uid="uid://bahonpspa3rxq" path="res://Sprites/Enemies/spr_kitty_enemy_strip3.png" id="1_vgyck"]
+[ext_resource type="Texture2D" uid="uid://dbbnkpfy76x35" path="res://Sprites/Enemies/CatEnemy.png" id="2_gpp7d"]
 [ext_resource type="Script" uid="uid://dxqqktbejqt10" path="res://Enemies/Cat/cat_animations.gd" id="3_ygjqb"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q3xiw"]
-atlas = ExtResource("1_vgyck")
+[sub_resource type="AtlasTexture" id="AtlasTexture_gojb5"]
+atlas = ExtResource("2_gpp7d")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cxghq"]
-atlas = ExtResource("1_vgyck")
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2yhu"]
+atlas = ExtResource("2_gpp7d")
 region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lhqce"]
-atlas = ExtResource("1_vgyck")
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2low"]
+atlas = ExtResource("2_gpp7d")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1yjwa"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_q3xiw")
+"texture": SubResource("AtlasTexture_gojb5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_cxghq")
+"texture": SubResource("AtlasTexture_c2yhu")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lhqce")
+"texture": SubResource("AtlasTexture_x2low")
 }],
 "loop": true,
 "name": &"walk",
-"speed": 6.0
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oo6ym"]
@@ -43,8 +43,8 @@ script = ExtResource("1_h4jm3")
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_1yjwa")
 animation = &"walk"
-frame = 1
-frame_progress = 0.02073417
+frame = 2
+frame_progress = 0.6724376
 script = ExtResource("3_ygjqb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

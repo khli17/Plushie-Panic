@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var health = 3
+var health = 25
 var damage = 2
 var speed = 50.0
 

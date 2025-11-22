@@ -1,4 +1,4 @@
 extends Upgrade
-class_name NeedleUpgrade
+class_name ProjectileUpgrade
 
 @export var speed : float
