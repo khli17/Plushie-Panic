@@ -5,7 +5,7 @@ class_name Weapon
 @export var cooldown : float
 @export var speed : float
 
-@export var projectile_node : PackedScene = preload("res://Weapons/Needle/needle_weapon.tscn")
+@export var projectile_node : PackedScene
 
 @export var upgrades : Array[Upgrade]
 #for evolution

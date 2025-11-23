@@ -9,8 +9,8 @@
 [resource]
 script = ExtResource("2_n88xp")
 damage = 15.0
-cooldown = 2.0
-speed = 10.0
+cooldown = 0.1
+speed = 500.0
 item_needed = ExtResource("1_n88xp")
 texture = ExtResource("3_npvdx")
 metadata/_custom_type_script = "uid://edt55c7hcvi0"
