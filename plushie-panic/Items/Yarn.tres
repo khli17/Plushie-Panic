@@ -6,25 +6,25 @@
 
 [sub_resource type="Resource" id="Resource_1l5dy"]
 script = ExtResource("3_7ohrc")
-description = "+15 Pickup Range"
-magnet = 15.0
+description = "+3 Pickup Range"
+magnet = 3.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_y25dv"]
 script = ExtResource("3_7ohrc")
-description = "+20 Pickup Range"
-magnet = 15.0
+description = "+1 Pickup Range"
+magnet = 1.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_batn2"]
 script = ExtResource("3_7ohrc")
-description = "+25 Pickup Range"
-magnet = 15.0
+description = "+5 Pickup Range"
+magnet = 5.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [resource]
 script = ExtResource("1_gcho7")
 upgrades = Array[ExtResource("3_7ohrc")]([SubResource("Resource_1l5dy"), SubResource("Resource_y25dv"), SubResource("Resource_batn2")])
-title = "Yran"
+title = "Yarn"
 texture = ExtResource("2_80jt0")
 metadata/_custom_type_script = "uid://04lll2vvrc43"

@@ -43,7 +43,7 @@ func activate(source, target, scene_tree):
 
 func upgrade_item():
 	if max_level_reached():
-		slot.item = evolution
+		#slot.item = evolution
 		return
 		
 	if not is_upgradeable():
