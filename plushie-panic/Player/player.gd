@@ -24,6 +24,11 @@ var isHurt : bool = false
 var nearest_enemy: CharacterBody2D
 var nearest_enemy_distance : float = 150 + area
 
+var gems : int = 0:
+	set(value):
+		gems = value
+		%Gems.text = "Gems: " + str(value)
+		
 var EXP : int = 0:
 	set(value):
 		EXP = value
@@ -108,3 +113,9 @@ func check_EXP():
 func _on_magnet_area_entered(area):
 	if area.has_method("follow"):
 		area.follow(self)
+
+func gain_gems(amount):
+	gems += amount
+	
+func open_chest():
+	$UI/Chest.open() 

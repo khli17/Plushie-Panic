@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://dr8go2x25b0sh"]
+[gd_scene load_steps=55 format=3 uid="uid://dr8go2x25b0sh"]
 
 [ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/Player/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
@@ -20,59 +20,38 @@
 [ext_resource type="Texture2D" uid="uid://bvjmrdmi7dg2f" path="res://Sprites/Chest.png" id="11_7emwf"]
 [ext_resource type="Texture2D" uid="uid://t6bky8myoubm" path="res://Sprites/Misc/Shadow.png" id="11_apopc"]
 [ext_resource type="Script" uid="uid://clfssfb14eniy" path="res://Player/chest.gd" id="11_hshwv"]
-[ext_resource type="Texture2D" uid="uid://c82gar6tjcmxa" path="res://Sprites/ChestOpenStrip.png" id="12_hshwv"]
-[ext_resource type="Texture2D" uid="uid://c4yugehi2mqrh" path="res://Sprites/ChestAnimations.png" id="13_gpjlu"]
+[ext_resource type="Texture2D" uid="uid://bqc5cay8ogimt" path="res://Sprites/ChestAnimation.png" id="13_7emwf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8mwp6"]
 atlas = ExtResource("11_7emwf")
 region = Rect2(0, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qemgg"]
-atlas = ExtResource("12_hshwv")
+[sub_resource type="AtlasTexture" id="AtlasTexture_hshwv"]
+atlas = ExtResource("13_7emwf")
 region = Rect2(0, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpjlu"]
+atlas = ExtResource("13_7emwf")
+region = Rect2(150, 0, 150, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qemgg"]
+atlas = ExtResource("13_7emwf")
+region = Rect2(300, 0, 150, 150)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8viyr"]
-atlas = ExtResource("12_hshwv")
-region = Rect2(150, 0, 150, 150)
+atlas = ExtResource("13_7emwf")
+region = Rect2(450, 0, 150, 150)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sm0op"]
-atlas = ExtResource("12_hshwv")
-region = Rect2(300, 0, 150, 150)
+atlas = ExtResource("13_7emwf")
+region = Rect2(600, 0, 150, 150)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_76lrf"]
-atlas = ExtResource("12_hshwv")
-region = Rect2(450, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_efx54"]
-atlas = ExtResource("12_hshwv")
-region = Rect2(600, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_755ss"]
-atlas = ExtResource("13_gpjlu")
-region = Rect2(0, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bbimk"]
-atlas = ExtResource("13_gpjlu")
-region = Rect2(150, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m0h3t"]
-atlas = ExtResource("13_gpjlu")
-region = Rect2(300, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i4o1l"]
-atlas = ExtResource("13_gpjlu")
-region = Rect2(450, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j2n6q"]
-atlas = ExtResource("13_gpjlu")
-region = Rect2(600, 0, 150, 150)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_c6x0f"]
-atlas = ExtResource("13_gpjlu")
+atlas = ExtResource("13_7emwf")
 region = Rect2(750, 0, 150, 150)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jp1hh"]
-atlas = ExtResource("13_gpjlu")
+[sub_resource type="AtlasTexture" id="AtlasTexture_efx54"]
+atlas = ExtResource("13_7emwf")
 region = Rect2(900, 0, 150, 150)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qs4pp"]
@@ -87,6 +66,12 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_hshwv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpjlu")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_qemgg")
 }, {
 "duration": 1.0,
@@ -100,27 +85,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_efx54")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_755ss")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bbimk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_m0h3t")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i4o1l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j2n6q")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_c6x0f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_jp1hh")
 }],
 "loop": false,
 "name": &"open_chest",
@@ -563,6 +527,8 @@ offset_left = 93.0
 offset_top = 63.0
 offset_right = 133.0
 offset_bottom = 103.0
+expand_mode = 1
+stretch_mode = 4
 
 [node name="TextureRect2" type="TextureRect" parent="UI/Chest/Rewards"]
 layout_mode = 0
@@ -570,6 +536,8 @@ offset_left = 227.0
 offset_top = 30.0
 offset_right = 267.0
 offset_bottom = 70.0
+expand_mode = 1
+stretch_mode = 4
 
 [node name="TextureRect3" type="TextureRect" parent="UI/Chest/Rewards"]
 layout_mode = 0
@@ -577,6 +545,17 @@ offset_left = 382.0
 offset_top = 63.0
 offset_right = 422.0
 offset_bottom = 103.0
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Gems" type="Label" parent="UI"]
+unique_name_in_owner = true
+offset_left = 1175.0
+offset_top = 89.0
+offset_right = 1272.0
+offset_bottom = 113.0
+text = "Gems: 0"
+horizontal_alignment = 2
 
 [node name="Player2DAnimation" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Gems" load_steps=3 format=3 uid="uid://yhkhoggwm4dw"]
+
+[ext_resource type="Script" uid="uid://cticdwhj4dq63" path="res://Items/Misc/Gems.gd" id="1_a7s3x"]
+[ext_resource type="Texture2D" uid="uid://bdacq8eqtx78a" path="res://Sprites/Gem.png" id="2_fdlsq"]
+
+[resource]
+script = ExtResource("1_a7s3x")
+title = "Gem"
+texture = ExtResource("2_fdlsq")
+metadata/_custom_type_script = "uid://cticdwhj4dq63"

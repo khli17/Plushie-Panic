@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Chest" load_steps=3 format=3 uid="uid://yieneyxa7b1o"]
+
+[ext_resource type="Texture2D" uid="uid://xonaayvylufs" path="res://Sprites/ChestDrop.png" id="1_0diyt"]
+[ext_resource type="Script" uid="uid://c7p2ueqmy0ywm" path="res://ChestResource.gd" id="2_8mcm2"]
+
+[resource]
+script = ExtResource("2_8mcm2")
+title = "ChestDrop"
+icon = ExtResource("1_0diyt")
+metadata/_custom_type_script = "uid://c7p2ueqmy0ywm"
