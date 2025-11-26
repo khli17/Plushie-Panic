@@ -6,20 +6,20 @@
 
 [sub_resource type="Resource" id="Resource_1l5dy"]
 script = ExtResource("3_7ohrc")
-description = "+0.1 Pickup Range"
-magnet = 0.1
+description = "+1 Pickup Range"
+magnet = 1.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_y25dv"]
 script = ExtResource("3_7ohrc")
-description = "+0.2 Pickup Range"
-magnet = 0.2
+description = "+2 Pickup Range"
+magnet = 2.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_batn2"]
 script = ExtResource("3_7ohrc")
-description = "+0.3 Pickup Range"
-magnet = 0.3
+description = "+3 Pickup Range"
+magnet = 3.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [resource]

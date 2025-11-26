@@ -16,7 +16,7 @@ var area : float = 50
 var magnet : float = 0:
 	set(value):
 		magnet = value
-		%Magnet.shape.radius = 50 + value
+		%Magnet.shape.radius = 5 + value
 var growth : float = 1
 
 var face_right : bool
