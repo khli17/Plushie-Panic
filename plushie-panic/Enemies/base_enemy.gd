@@ -80,6 +80,8 @@ func drop_item():
 		return
 		
 	var item = drops.pick_random()
+	#if elite: #for an elite enemy
+		#item = load("res://Items/ChestDrop.tres")
 	var item_to_drop = drop.instantiate()
 	
 	item_to_drop.type = item

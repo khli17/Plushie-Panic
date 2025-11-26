@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="ProjectileShot" load_steps=12 format=3 uid="uid://d2akik40pdvc7"]
+[gd_resource type="Resource" script_class="ProjectileShot" load_steps=13 format=3 uid="uid://d2akik40pdvc7"]
 
 [ext_resource type="Resource" uid="uid://cjgocfvnybda8" path="res://TripleNeedleWeapon.tres" id="1_1n2s5"]
 [ext_resource type="PackedScene" uid="uid://j4rq8oc7jjhy" path="res://Weapons/Needle/needle_weapon.tscn" id="1_altkx"]
+[ext_resource type="Resource" uid="uid://bsqrd0dllriui" path="res://Items/Yarn.tres" id="2_qu8mr"]
 [ext_resource type="Script" uid="uid://18rjpkbvym2w" path="res://Weapons/Needle/projectile_shot.gd" id="3_6b5vq"]
 [ext_resource type="Texture2D" uid="uid://coc7khls864um" path="res://Sprites/Weapons/Icons/NeedleIcon.jpg" id="3_qu8mr"]
 [ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Upgrade.gd" id="4_6b5vq"]
@@ -44,6 +45,7 @@ cooldown = 2.5
 speed = 400.0
 projectile_node = ExtResource("1_altkx")
 upgrades = Array[ExtResource("4_6b5vq")]([SubResource("Resource_d728y"), SubResource("Resource_d8h7j"), SubResource("Resource_c1xyi"), SubResource("Resource_rp84t"), SubResource("Resource_7iehv")])
+item_needed = ExtResource("2_qu8mr")
 evolution = ExtResource("1_1n2s5")
 texture = ExtResource("3_qu8mr")
 metadata/_custom_type_script = "uid://18rjpkbvym2w"

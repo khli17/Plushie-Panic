@@ -32,13 +32,13 @@ func add_option(item) -> int:
 		return 1
 	return 0
 
-##traverse through weapons and store available weapon resource	
-#func get_available_weapons():
-	#var weapon_resource = []
-	#for weapon in weapons.get_children():
-		#if weapon.weapon != null:
-			#weapon_resource.append(weapon.weapon)
-	#return weapon_resource
+#traverse through weapons and store available weapon resource	
+func get_available_weapons():
+	var weapon_resource = []
+	for weapon in weapons.get_children():
+		if weapon.weapon != null:
+			weapon_resource.append(weapon.weapon)
+	return weapon_resource
 
 	
 func show_option():

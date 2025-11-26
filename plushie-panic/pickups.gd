@@ -22,6 +22,8 @@ func _physics_process(delta):
 		
 #set flag to true
 func follow(_target : CharacterBody2D):
+	if type is Chest:
+		return
 	can_follow = true
 
 #when player interacts, queue free

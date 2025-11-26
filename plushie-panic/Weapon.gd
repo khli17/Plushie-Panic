@@ -36,7 +36,7 @@ func upgrade_item():
 	
 	level += 1
 	
-	evolved = true
+	
 	
 func max_level_reached():
 	if upgrades.size() +1 == level and upgrades.size() != 0:
