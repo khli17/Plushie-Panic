@@ -13,7 +13,7 @@ class_name Weapon
 @export var evolution : Weapon
 
 var slot
-var evolved : bool = false #to track if weapon has evolved
+
 
 func activate(_source, _target, _scene_tree):
 	pass
@@ -43,5 +43,3 @@ func max_level_reached():
 		return true
 	return false
 	
-func is_evolved() -> bool:
-	return evolved

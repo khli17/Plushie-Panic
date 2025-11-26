@@ -1,6 +1,8 @@
 extends Weapon
 class_name ProjectileShot
 
+var evolved : bool = false #to track if weapon has evolved
+
 func shoot(source, target, scene_tree):
 	if target == null:
 		return
@@ -36,6 +38,7 @@ func activate(source, target, scene_tree):
 	
 	#for Triple needle
 	if is_evolved():
+
 		var base_direction = (target.position - source.position).normalized()
 		shoot_at_angle(source, base_direction, deg_to_rad(30), scene_tree)
 		shoot_at_angle(source, base_direction, deg_to_rad(-30), scene_tree)
@@ -44,6 +47,7 @@ func activate(source, target, scene_tree):
 func upgrade_item():
 	if max_level_reached():
 		slot.item = evolution
+		slot.item.evolved = true
 		return
 		
 	if not is_upgradeable():
@@ -58,3 +62,5 @@ func upgrade_item():
 	level += 1
 	
 		
+func is_evolved() -> bool:
+	return evolved

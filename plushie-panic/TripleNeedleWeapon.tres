@@ -8,8 +8,9 @@
 [resource]
 script = ExtResource("2_xhkon")
 damage = 15.0
-cooldown = 0.1
+cooldown = 1.5
 speed = 500.0
+projectile_node = ExtResource("1_rk8tx")
 title = "TripleNeedleWeapon"
 texture = ExtResource("3_1kt6v")
 metadata/_custom_type_script = "uid://18rjpkbvym2w"
