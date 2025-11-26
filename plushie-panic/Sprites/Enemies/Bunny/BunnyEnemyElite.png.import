@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqc5cay8ogimt"
-path="res://.godot/imported/ChestAnimation.png-237eda651177c94fe7876b456dce1d61.ctex"
+uid="uid://emj04glbnup3"
+path="res://.godot/imported/BunnyEnemyElite.png-6d0da0e481357c05b373e7bd17b562fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/ChestAnimation.png"
-dest_files=["res://.godot/imported/ChestAnimation.png-237eda651177c94fe7876b456dce1d61.ctex"]
+source_file="res://Sprites/Enemies/Bunny/BunnyEnemyElite.png"
+dest_files=["res://.godot/imported/BunnyEnemyElite.png-6d0da0e481357c05b373e7bd17b562fc.ctex"]
 
 [params]
 

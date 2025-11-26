@@ -1,0 +1,30 @@
+extends Weapon
+class_name Circular
+
+@export var angular_speed = 20
+@export var radius = 20
+@export var amount = 1
+
+var projectile_reference : Array[Area2D]
+var angle : float
+
+func add_to_player(source):
+	var projectile = projectile_node.instantiate()
+	
+	projectile.speed = 0
+	projectile.damage = damage
+	projectile.source = source
+	projectile.hide()
+	
+	projectile_reference.append(projectile)
+	source.call_deferred("add_child", projectile)
+
+func update(delta):
+	angle += angular_speed * delta
+	
+	for i in range(projectile_reference.size()):
+		var offset = i * (360.0/amount)
+		
+		projectile_reference[i].position = radius * Vector2(cos(deg_to_rad(angle+offset)), sin(deg_to_rad(angle+offset)))
+		
+		projectile_reference[i].show()

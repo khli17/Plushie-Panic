@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwo1r6s8qtjsx"
-path="res://.godot/imported/BunnyEnemy2.png-fb4a1ca39afde03fb3a5a4291a756627.ctex"
+uid="uid://cbjerogajrnmq"
+path="res://.godot/imported/Chestopen.png-8c867d52ebde0a007192e51d60d591ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemies/BunnyEnemy2.png"
-dest_files=["res://.godot/imported/BunnyEnemy2.png-fb4a1ca39afde03fb3a5a4291a756627.ctex"]
+source_file="res://Sprites/Drops/Chestopen.png"
+dest_files=["res://.godot/imported/Chestopen.png-8c867d52ebde0a007192e51d60d591ad.ctex"]
 
 [params]
 

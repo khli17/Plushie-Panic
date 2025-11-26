@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://bbyg432aktuic"]
 
-[ext_resource type="Script" uid="uid://04lll2vvrc43" path="res://PassiveItem.gd" id="1_op584"]
+[ext_resource type="Script" uid="uid://04lll2vvrc43" path="res://Items/PassiveItem.gd" id="1_op584"]
 [ext_resource type="Texture2D" uid="uid://befojwmfk27r5" path="res://Sprites/Items/PillowItem.jpg" id="2_55p1w"]
 [ext_resource type="Script" uid="uid://b57318x5g3djv" path="res://Stats.gd" id="3_3cq4g"]
 

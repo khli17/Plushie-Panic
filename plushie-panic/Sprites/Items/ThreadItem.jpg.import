@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbjerogajrnmq"
-path="res://.godot/imported/Chestopen.png-b5c1ab7a974051b4340641b2d41d4791.ctex"
+uid="uid://bffyfu21n250t"
+path="res://.godot/imported/ThreadItem.jpg-7429797e5381405d0843b93f93ca42db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Chestopen.png"
-dest_files=["res://.godot/imported/Chestopen.png-b5c1ab7a974051b4340641b2d41d4791.ctex"]
+source_file="res://Sprites/Items/ThreadItem.jpg"
+dest_files=["res://.godot/imported/ThreadItem.jpg-7429797e5381405d0843b93f93ca42db.ctex"]
 
 [params]
 
