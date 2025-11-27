@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="Circular" load_steps=12 format=3 uid="uid://c8c6goabtll2l"]
+
+[ext_resource type="Script" uid="uid://coqx6bivrrh11" path="res://CircularWeapon.gd" id="1_c0fp1"]
+[ext_resource type="PackedScene" uid="uid://bxb45s565lweq" path="res://Weapons/Necklace/necklace_weapon.tscn" id="1_q5unw"]
+[ext_resource type="Texture2D" uid="uid://b1ejbh02st3ko" path="res://Sprites/Necklace.jpg" id="2_q5unw"]
+[ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Upgrade.gd" id="3_2777y"]
+[ext_resource type="Script" uid="uid://wgpdwtd8ye6t" path="res://NecklaceUpgrade.gd" id="5_2777y"]
+
+[sub_resource type="Resource" id="Resource_u650h"]
+script = ExtResource("5_2777y")
+angular_speed = 5.0
+description = "+5 Speed"
+metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
+
+[sub_resource type="Resource" id="Resource_cifrs"]
+script = ExtResource("5_2777y")
+amount = 1
+description = "Add another jewel"
+metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
+
+[sub_resource type="Resource" id="Resource_1s4rw"]
+script = ExtResource("5_2777y")
+amount = 1
+description = "Add another jewel"
+metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
+
+[sub_resource type="Resource" id="Resource_ea52s"]
+script = ExtResource("5_2777y")
+damage = 5.0
+description = "+5 Damage"
+metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
+
+[sub_resource type="Resource" id="Resource_4i4os"]
+script = ExtResource("5_2777y")
+damage = 3.0
+description = "+3 Damage"
+metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
+
+[sub_resource type="Resource" id="Resource_q4lq1"]
+script = ExtResource("5_2777y")
+angular_speed = 5.0
+description = "+5 Speed"
+metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
+
+[resource]
+script = ExtResource("1_c0fp1")
+angular_speed = 90
+radius = 75
+damage = 5.0
+cooldown = 3.0
+projectile_node = ExtResource("1_q5unw")
+upgrades = Array[ExtResource("3_2777y")]([SubResource("Resource_u650h"), SubResource("Resource_cifrs"), SubResource("Resource_1s4rw"), SubResource("Resource_ea52s"), SubResource("Resource_4i4os"), SubResource("Resource_q4lq1"), null, null])
+title = "Necklace"
+texture = ExtResource("2_q5unw")
+metadata/_custom_type_script = "uid://coqx6bivrrh11"

@@ -8,7 +8,9 @@ extends PanelContainer
 		$Cooldown.wait_time = value.cooldown
 		item.slot = self
 		
-		
+func _physics_process(delta):
+	if item != null and item.has_method("update"): #if weapon has update func, gets updated in phys process
+		item.update(delta)
 
 func _on_cooldown_timeout() -> void:
 	if item:
