@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b22ea0gsmuqj0"
-path="res://.godot/imported/RedJewel.png-e340ba1da00d5b693fe7cb52a73f42a2.ctex"
+uid="uid://4f01edxu3rf0"
+path="res://.godot/imported/PushEvo.png-5ba96cb9d1656aa75bd25d3919c283db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/RedJewel.png"
-dest_files=["res://.godot/imported/RedJewel.png-e340ba1da00d5b693fe7cb52a73f42a2.ctex"]
+source_file="res://Sprites/PushEvo.png"
+dest_files=["res://.godot/imported/PushEvo.png-5ba96cb9d1656aa75bd25d3919c283db.ctex"]
 
 [params]
 

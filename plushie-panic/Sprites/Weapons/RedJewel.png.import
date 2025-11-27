@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3ropqbhmerh1"
-path="res://.godot/imported/BejeweledNecklace.jpg-ccff1570cb40c16d31f1f3ca0aca759d.ctex"
+uid="uid://b22ea0gsmuqj0"
+path="res://.godot/imported/RedJewel.png-e3a3794900586feabd667722732f9c76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/BejeweledNecklace.jpg"
-dest_files=["res://.godot/imported/BejeweledNecklace.jpg-ccff1570cb40c16d31f1f3ca0aca759d.ctex"]
+source_file="res://Sprites/Weapons/RedJewel.png"
+dest_files=["res://.godot/imported/RedJewel.png-e3a3794900586feabd667722732f9c76.ctex"]
 
 [params]
 

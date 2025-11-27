@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1153a84u5rqp"
-path="res://.godot/imported/PurpleJewel.png-d5b40186098e24c5cb83ca7cd93a50bb.ctex"
+uid="uid://bg8rhphawpgj2"
+path="res://.godot/imported/Needle Evolved.jpg-033b75fbf2a6d88f1f9237c2e636621a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/PurpleJewel.png"
-dest_files=["res://.godot/imported/PurpleJewel.png-d5b40186098e24c5cb83ca7cd93a50bb.ctex"]
+source_file="res://Sprites/Weapons/Icons/Needle Evolved.jpg"
+dest_files=["res://.godot/imported/Needle Evolved.jpg-033b75fbf2a6d88f1f9237c2e636621a.ctex"]
 
 [params]
 

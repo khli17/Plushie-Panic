@@ -1,23 +1,22 @@
-extends CharacterBody2D
-
-var health = 25
-var damage = 2
-var speed = 50.0
-
-#makes sure nodes/children are created
-@onready var player = get_node("/root/Game/Player")
+extends BaseEnemy
 
 func _ready():
-	%BunnyAnimations.play_walk()
+	health = 15;
+	damage = 4
+	speed = 75
+	%CatAnimations.play_walk()
+	super._ready()
 
-
-# moves enemy towards player
-func _physics_process(delta):
-	var direction = global_position.direction_to(player.global_position)
-	velocity = direction * speed
-	move_and_slide()
-	
+#flips bunny to face player
+func update_sprite_direction():
 	if velocity.x > 0:
-		$BunnyAnimations.flip_h = true
+		$CatAnimations.flip_h = true
 	elif velocity.x < 0:
-		$BunnyAnimations.flip_h = false
+		$CatAnimations.flip_h = false
+
+#when enemy is hit, flashes red
+func apply_damage_flash():
+	var tween = get_tree().create_tween()
+	tween.tween_property($CatAnimations, "modulate", Color(3, 0.25, 0.25), 0.2)
+	tween.chain().tween_property($CatAnimations, "modulate", Color(1,1,1), 0.2)
+	tween.bind_node(self)

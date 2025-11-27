@@ -1,6 +1,6 @@
 extends Weapon
 class_name Projectile_Jewel
-#borriwng projectile_shot for now
+
 var evolved : bool = false #to track if weapon has evolved
 
 func shoot(source, target, scene_tree):

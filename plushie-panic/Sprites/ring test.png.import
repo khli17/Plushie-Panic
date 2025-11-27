@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bg8rhphawpgj2"
-path="res://.godot/imported/Needle Evolved.jpg-74cbe274d2bc226a4ef31b665fcdb2ad.ctex"
+uid="uid://b7nauaebyqmlu"
+path="res://.godot/imported/ring test.png-aad88f9893322d27d29a33bf5d6cd98c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Weapons/Needle Evolved.jpg"
-dest_files=["res://.godot/imported/Needle Evolved.jpg-74cbe274d2bc226a4ef31b665fcdb2ad.ctex"]
+source_file="res://Sprites/ring test.png"
+dest_files=["res://.godot/imported/ring test.png-aad88f9893322d27d29a33bf5d6cd98c.ctex"]
 
 [params]
 

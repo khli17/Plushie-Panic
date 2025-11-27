@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ejbh02st3ko"
-path="res://.godot/imported/Necklace.jpg-246d311de4877d945036832ae157b1b7.ctex"
+uid="uid://b3ropqbhmerh1"
+path="res://.godot/imported/BejeweledNecklace.jpg-6706aead42f1588e1bf7d7dd1066510e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Necklace.jpg"
-dest_files=["res://.godot/imported/Necklace.jpg-246d311de4877d945036832ae157b1b7.ctex"]
+source_file="res://Sprites/Weapons/Icons/BejeweledNecklace.jpg"
+dest_files=["res://.godot/imported/BejeweledNecklace.jpg-6706aead42f1588e1bf7d7dd1066510e.ctex"]
 
 [params]
 

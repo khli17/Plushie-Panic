@@ -31,6 +31,7 @@ folder_colors={
 "res://Items/": "purple",
 "res://Player/": "pink",
 "res://Sprites/": "teal",
+"res://UI Stuff/": "green",
 "res://Weapons/": "orange"
 }
 

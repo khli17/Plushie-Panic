@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be1tw14so5qno"
-path="res://.godot/imported/Diamond.png-11a0b44c375b364576b61697dd566fb1.ctex"
+uid="uid://b1ejbh02st3ko"
+path="res://.godot/imported/Necklace.jpg-079ca3e13ef9dd4bafef7b709bae5f4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Diamond.png"
-dest_files=["res://.godot/imported/Diamond.png-11a0b44c375b364576b61697dd566fb1.ctex"]
+source_file="res://Sprites/Weapons/Icons/Necklace.jpg"
+dest_files=["res://.godot/imported/Necklace.jpg-079ca3e13ef9dd4bafef7b709bae5f4c.ctex"]
 
 [params]
 

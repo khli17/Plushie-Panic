@@ -1,12 +1,10 @@
 extends Area2D
-#borriwng needle weapon for nwo
-
+#dont think this is needled but just incaseee
 var direction : Vector2 = Vector2.RIGHT
 var speed : float = 200
 var damage: float = 1
 var source
 
-#rotate needle
 func _ready():
 	rotation = direction.angle()
 	
@@ -20,7 +18,7 @@ func _on_body_entered(body: Node2D) -> void:
 			body.take_damage(damage * source.might)
 		else:
 			body.take_damage(damage)
-		body.knockback = direction * 75
+		body.knockback = direction * 100
 
 #when needle goes offstream, removes it
 func _on_screen_exited() -> void:

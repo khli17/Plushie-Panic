@@ -1,17 +1,16 @@
-[gd_scene load_steps=56 format=3 uid="uid://dr8go2x25b0sh"]
+[gd_scene load_steps=55 format=3 uid="uid://dr8go2x25b0sh"]
 
 [ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/Player/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://bo1ilqr62wo8m" path="res://Sprites/UI Stuff/UIPanel.jpg" id="2_lfmf2"]
 [ext_resource type="PackedScene" uid="uid://cwfe3l5oinkdv" path="res://slot.tscn" id="2_x3vf3"]
-[ext_resource type="Resource" uid="uid://d2akik40pdvc7" path="res://Weapons/Weapon Resources/needle.tres" id="3_apopc"]
 [ext_resource type="Texture2D" uid="uid://chc8elfjsro4j" path="res://Sprites/Player/RiaRun.png" id="3_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://c7aqpvb3fw1yn" path="res://Sprites/Player/RiaDamageIdle.png" id="3_vtle1"]
 [ext_resource type="Texture2D" uid="uid://2y5td5rq5f25" path="res://Sprites/Player/RiaDamageRun.png" id="4_fhl08"]
 [ext_resource type="Texture2D" uid="uid://c3mx7paci6ubv" path="res://Sprites/UI Stuff/EXPBar/EXPBARUNDER.png" id="4_gu6f8"]
 [ext_resource type="Script" uid="uid://3ucaomt5j3m0" path="res://Player/player_2d_animation.gd" id="4_hqtel"]
 [ext_resource type="Texture2D" uid="uid://cadr0n1m3w2qn" path="res://Sprites/UI Stuff/EXPBar/EXPBAR.png" id="5_dkpta"]
-[ext_resource type="Resource" uid="uid://c8c6goabtll2l" path="res://Necklace.tres" id="5_hshwv"]
+[ext_resource type="Resource" uid="uid://c8c6goabtll2l" path="res://Weapons/Weapon Resources/Necklace.tres" id="5_hshwv"]
 [ext_resource type="PackedScene" uid="uid://brhnunwd7rpex" path="res://Weapons/Push/push_weapon.tscn" id="5_k53q1"]
 [ext_resource type="Texture2D" uid="uid://cjs34dqcuptug" path="res://Sprites/UI Stuff/EXPBar/EXPBARPROGress.png" id="6_lfmf2"]
 [ext_resource type="Script" uid="uid://b7foi6r3t86kj" path="res://Player/options.gd" id="7_dkpta"]
@@ -396,7 +395,6 @@ offset_bottom = 100.0
 
 [node name="Slot" parent="UI/Weapons" instance=ExtResource("2_x3vf3")]
 layout_mode = 2
-item = ExtResource("3_apopc")
 
 [node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_x3vf3")]
 layout_mode = 2

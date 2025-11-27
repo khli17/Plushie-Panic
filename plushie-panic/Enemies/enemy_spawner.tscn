@@ -1,13 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm8wwfito3q3y"]
+[gd_scene load_steps=2 format=3 uid="uid://bm8wwfito3q3y"]
 
 [ext_resource type="Script" uid="uid://d0p2vfjsjafd2" path="res://Spawner.gd" id="1_00s5r"]
-[ext_resource type="PackedScene" uid="uid://d4mved3pthar7" path="res://Enemies/Bunny/bunny_enemy.tscn" id="2_00s5r"]
-[ext_resource type="PackedScene" uid="uid://yp7hwemcqcle" path="res://Enemies/Cat/cat_enemy.tscn" id="3_63vqd"]
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_00s5r")
-enemy = ExtResource("2_00s5r")
-enemy2 = ExtResource("3_63vqd")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

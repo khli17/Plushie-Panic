@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5uuts3mfsw66"]
+
+[ext_resource type="Texture2D" uid="uid://dnunllpe6y3lt" path="res://Sprites/RatEnemy.png" id="1_ee8e0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sax4"]
+atlas = ExtResource("1_ee8e0")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqf2u"]
+atlas = ExtResource("1_ee8e0")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofosk"]
+atlas = ExtResource("1_ee8e0")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8f6rx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sax4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqf2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofosk")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ee8e0"]
+radius = 16.0
+height = 54.0
+
+[node name="Rat" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8f6rx")
+animation = &"walk"
+frame_progress = 0.6771046
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 13)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ee8e0")

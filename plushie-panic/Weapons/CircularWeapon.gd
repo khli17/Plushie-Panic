@@ -8,6 +8,12 @@ class_name Circular
 var projectile_reference : Array[Area2D]
 var angle : float
 
+@export var jewel_scenes : Array[PackedScene]=[
+	preload("res://Weapons/Necklace/diamond.tscn"),
+	preload("res://Weapons/Necklace/red_jewel.tscn"),
+	preload("res://Weapons/Necklace/purple_jewel.tscn")
+]
+
 func activate(source, _target, _scene_tree):
 	reset()
 	
@@ -16,12 +22,14 @@ func activate(source, _target, _scene_tree):
 		add_to_player(source)
 
 func add_to_player(source):
-	var projectile = projectile_node.instantiate()
+	var jewel_index = projectile_reference.size() % jewel_scenes.size()
+	
+	var projectile = jewel_scenes[jewel_index].instantiate()
 	
 	projectile.speed = 0
 	projectile.damage = damage
 	projectile.source = source
-	projectile.hide()
+	#projectile.hide()
 	
 	projectile_reference.append(projectile)
 	source.call_deferred("add_child", projectile)
@@ -34,7 +42,7 @@ func update(delta):
 		
 		projectile_reference[i].position = radius * Vector2(cos(deg_to_rad(angle+offset)), sin(deg_to_rad(angle+offset)))
 		
-		projectile_reference[i].show()
+		#projectile_reference[i].show()
 		
 func reset():
 	for i in range(projectile_reference.size()):

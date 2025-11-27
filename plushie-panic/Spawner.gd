@@ -2,9 +2,10 @@ extends Node2D
 class_name Enemy 
 
 @export var player : CharacterBody2D
-@export var enemy: PackedScene
-@export var enemy2: PackedScene
-@export var enemy3: PackedScene
+@export var bunny: PackedScene
+@export var cat: PackedScene
+@export var rat: PackedScene
+@export var dog: PackedScene
 @export var Boss: PackedScene
 
 var distance : float = 400
@@ -36,27 +37,26 @@ func spawn(position : Vector2):
 	if not can_spawn:
 		return
 		
-		
-	var enemy_instance = enemy.instantiate() #bunny
+	var enemy_instance = bunny.instantiate() #bunny
 	#if certain amount of time goes by, spawn certain enemies
 	
 	enemy_instance.position = position
 	
 	get_tree().current_scene.add_child(enemy_instance)
 	
-## Determine which enemy to spawn based on time
-#func get_enemy_type_for_time() -> PackedScene:
-	#var total_seconds = minute * 60 + second
-	#
-	## Spawn different enemies based on elapsed time
-	#if total_seconds < 30:  # First 30 seconds - only bunnies
-		#return enemy
-	#elif total_seconds < 60:  # 30-60 seconds - enemy2
-		#return enemy2
-	#elif total_seconds < 120:  # 1-2 minutes - enemy3
-		#return enemy3
-	#else:  # After 2 minutes - mix of enemies or harder ones
-		#return enemy3  # Or randomize between types
+# Determine which enemy to spawn based on time
+func get_enemy_type_for_time() -> PackedScene:
+	var total_seconds = minute * 60 + second
+	
+	# Spawn different enemies based on elapsed time
+	if total_seconds < 30:  # First 30 seconds - only bunnies
+		return bunny
+	elif total_seconds < 60:  # 30-60 seconds - enemy2
+		return cat
+	elif total_seconds < 120:  # 1-2 minutes - enemy3
+		return dog
+	else:  # After 2 minutes - mix of enemies or harder ones
+		return rat  # Or randomize between types
 	
 func get_random_position() -> Vector2: 
 	return player.position + distance * Vector2.RIGHT.rotated(randf_range(0,2*PI))

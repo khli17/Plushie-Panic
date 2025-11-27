@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpg311hvx44ir"]
+
+[ext_resource type="Script" uid="uid://nsaives5ejm7" path="res://Weapons/Necklace/necklace_weapon.gd" id="1_eb5pe"]
+[ext_resource type="Texture2D" uid="uid://b22ea0gsmuqj0" path="res://Sprites/Weapons/RedJewel.png" id="2_ho4v8"]
+
+[node name="RedJewel" type="Area2D"]
+script = ExtResource("1_eb5pe")
+
+[node name="RedJewel" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_ho4v8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-14, -26, 14, -26, 30, -10, 30, 10, 14, 26, -14, 26, -30, 10, -30, -10)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
