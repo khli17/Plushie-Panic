@@ -1,17 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://c5uuts3mfsw66"]
+[gd_scene load_steps=9 format=3 uid="uid://c5uuts3mfsw66"]
 
-[ext_resource type="Texture2D" uid="uid://dnunllpe6y3lt" path="res://Sprites/RatEnemy.png" id="1_ee8e0"]
+[ext_resource type="Script" uid="uid://bbghitbps5r5y" path="res://Enemies/Rat/rat_enemy.gd" id="1_1dfbv"]
+[ext_resource type="Texture2D" uid="uid://dnunllpe6y3lt" path="res://Sprites/RatEnemy.png" id="2_2yn1b"]
+[ext_resource type="Script" uid="uid://d0nc2j52lqt00" path="res://Enemies/Rat/rat_animations.gd" id="3_jkdg4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3sax4"]
-atlas = ExtResource("1_ee8e0")
+atlas = ExtResource("2_2yn1b")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqf2u"]
-atlas = ExtResource("1_ee8e0")
+atlas = ExtResource("2_2yn1b")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ofosk"]
-atlas = ExtResource("1_ee8e0")
+atlas = ExtResource("2_2yn1b")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8f6rx"]
@@ -35,12 +37,17 @@ animations = [{
 radius = 16.0
 height = 54.0
 
-[node name="Rat" type="CharacterBody2D"]
+[node name="RatEnemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_1dfbv")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="RatAnimations" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_8f6rx")
 animation = &"walk"
-frame_progress = 0.6771046
+frame_progress = 0.25616658
+script = ExtResource("3_jkdg4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 13)

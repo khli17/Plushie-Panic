@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://b22ea0gsmuqj0" path="res://Sprites/Weapons/RedJewel.png" id="2_ho4v8"]
 
 [node name="RedJewel" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_eb5pe")
 
 [node name="RedJewel" type="Sprite2D" parent="."]

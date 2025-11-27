@@ -8,6 +8,16 @@ class_name Enemy
 @export var dog: PackedScene
 @export var Boss: PackedScene
 
+@export var enemy_waves :=[
+	{"time": 0, "scenes": [rat]},
+	{"time": 60, "scenes": [rat, bunny]},
+	{"time": 90, "scenes": [bunny, cat]},
+	{"time": 120, "scenes": [cat, dog]},
+	{"time": 180, "scenes": [rat, dog]},
+	{"time": 240, "scenes": [rat, bunny, cat, dog]}
+	
+]
+
 var distance : float = 400
 var can_spawn : bool = true
 
@@ -37,26 +47,31 @@ func spawn(position : Vector2):
 	if not can_spawn:
 		return
 		
-	var enemy_instance = bunny.instantiate() #bunny
+	#var enemy_instance = bunny.instantiate() #bunny
 	#if certain amount of time goes by, spawn certain enemies
+	var scene  := get_enemy_type_for_time()
+	
+	var enemy_instance = scene.instantiate()
 	
 	enemy_instance.position = position
 	
 	get_tree().current_scene.add_child(enemy_instance)
 	
-# Determine which enemy to spawn based on time
+#determines what enemmies to spawn depending on time
 func get_enemy_type_for_time() -> PackedScene:
 	var total_seconds = minute * 60 + second
 	
-	# Spawn different enemies based on elapsed time
-	if total_seconds < 30:  # First 30 seconds - only bunnies
-		return bunny
-	elif total_seconds < 60:  # 30-60 seconds - enemy2
-		return cat
-	elif total_seconds < 120:  # 1-2 minutes - enemy3
-		return dog
-	else:  # After 2 minutes - mix of enemies or harder ones
-		return rat  # Or randomize between types
+	var available := []
+	
+	for wave in enemy_waves:
+		if total_seconds >= wave["time"]:
+			available = wave["scenes"]
+			
+	#after last wave, randomize everything
+	if available.is_empty():
+		return rat
+		
+	return available.pick_random()
 	
 func get_random_position() -> Vector2: 
 	return player.position + distance * Vector2.RIGHT.rotated(randf_range(0,2*PI))

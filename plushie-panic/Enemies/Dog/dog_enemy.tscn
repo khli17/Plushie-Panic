@@ -45,6 +45,8 @@ radius = 27.0
 height = 110.0
 
 [node name="Dog_Enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_1eimh")
 
 [node name="DogAnimations" type="AnimatedSprite2D" parent="."]

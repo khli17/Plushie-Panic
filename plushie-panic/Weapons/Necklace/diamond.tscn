@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://nsaives5ejm7" path="res://Weapons/Necklace/necklace_weapon.gd" id="1_v2s3d"]
 
 [node name="Diamond" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_v2s3d")
 
 [node name="Diamond" type="Sprite2D" parent="."]

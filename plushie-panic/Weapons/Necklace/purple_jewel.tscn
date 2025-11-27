@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c1153a84u5rqp" path="res://Sprites/Weapons/PurpleJewel.png" id="2_cs44r"]
 
 [node name="PurpleJewel" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
 script = ExtResource("1_rafww")
 
 [node name="PurpleJewel" type="Sprite2D" parent="."]
