@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Circular" load_steps=16 format=3 uid="uid://c8c6goabtll2l"]
+[gd_resource type="Resource" script_class="Circular" load_steps=15 format=3 uid="uid://c8c6goabtll2l"]
 
 [ext_resource type="PackedScene" uid="uid://bxb45s565lweq" path="res://Weapons/Necklace/diamond.tscn" id="1_7yd5b"]
 [ext_resource type="Resource" uid="uid://bun7lv8056qlu" path="res://Weapons/Weapon Resources/BejeweledNecklace.tres" id="1_ihoqj"]
@@ -40,12 +40,6 @@ damage = 3.0
 description = "+3 Damage"
 metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
 
-[sub_resource type="Resource" id="Resource_q4lq1"]
-script = ExtResource("7_mxe0w")
-angular_speed = 5.0
-description = "+5 Speed"
-metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
-
 [resource]
 script = ExtResource("4_ufggr")
 angular_speed = 90
@@ -53,7 +47,7 @@ radius = 75
 damage = 5.0
 cooldown = 3.0
 projectile_node = ExtResource("1_7yd5b")
-upgrades = Array[ExtResource("6_f5p5h")]([SubResource("Resource_u650h"), SubResource("Resource_cifrs"), SubResource("Resource_1s4rw"), SubResource("Resource_ea52s"), SubResource("Resource_4i4os"), SubResource("Resource_q4lq1"), null, null])
+upgrades = Array[ExtResource("6_f5p5h")]([SubResource("Resource_u650h"), SubResource("Resource_cifrs"), SubResource("Resource_1s4rw"), SubResource("Resource_ea52s"), SubResource("Resource_4i4os")])
 item_needed = ExtResource("1_t6xow")
 evolution = ExtResource("1_ihoqj")
 title = "Necklace"

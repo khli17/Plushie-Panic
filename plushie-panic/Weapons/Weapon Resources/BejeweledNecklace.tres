@@ -1,19 +1,21 @@
-[gd_resource type="Resource" script_class="Circular" load_steps=7 format=3 uid="uid://bun7lv8056qlu"]
+[gd_resource type="Resource" script_class="Circular" load_steps=8 format=3 uid="uid://bun7lv8056qlu"]
 
-[ext_resource type="PackedScene" uid="uid://bxb45s565lweq" path="res://Weapons/Necklace/diamond.tscn" id="1_tl0qg"]
-[ext_resource type="PackedScene" uid="uid://dpg311hvx44ir" path="res://Weapons/Necklace/red_jewel.tscn" id="2_l5o2l"]
-[ext_resource type="PackedScene" uid="uid://6m1l1no2d2ys" path="res://Weapons/Necklace/purple_jewel.tscn" id="3_giyy2"]
-[ext_resource type="Script" uid="uid://coqx6bivrrh11" path="res://Weapons/CircularWeapon.gd" id="4_vmfnv"]
-[ext_resource type="Texture2D" uid="uid://b3ropqbhmerh1" path="res://Sprites/Weapons/Icons/BejeweledNecklace.jpg" id="5_chim2"]
-[ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="6_7nt51"]
+[ext_resource type="Resource" uid="uid://bmjmvjymtxamp" path="res://Items/Thread.tres" id="1_avqb8"]
+[ext_resource type="PackedScene" uid="uid://bxb45s565lweq" path="res://Weapons/Necklace/diamond.tscn" id="2_wx6yd"]
+[ext_resource type="PackedScene" uid="uid://dpg311hvx44ir" path="res://Weapons/Necklace/red_jewel.tscn" id="3_0eepn"]
+[ext_resource type="PackedScene" uid="uid://6m1l1no2d2ys" path="res://Weapons/Necklace/purple_jewel.tscn" id="4_68e64"]
+[ext_resource type="Script" uid="uid://coqx6bivrrh11" path="res://Weapons/CircularWeapon.gd" id="5_pdyok"]
+[ext_resource type="Texture2D" uid="uid://b3ropqbhmerh1" path="res://Sprites/Weapons/Icons/BejeweledNecklace.jpg" id="6_gv8lt"]
+[ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="7_j0h0o"]
 
 [resource]
-script = ExtResource("4_vmfnv")
+script = ExtResource("5_pdyok")
 angular_speed = 100
 radius = 80
 amount = 6
 damage = 10.0
 cooldown = 2.0
+item_needed = ExtResource("1_avqb8")
 title = "Bejeweled Necklace"
-texture = ExtResource("5_chim2")
+texture = ExtResource("6_gv8lt")
 metadata/_custom_type_script = "uid://coqx6bivrrh11"
