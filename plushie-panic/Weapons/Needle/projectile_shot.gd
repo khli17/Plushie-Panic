@@ -36,8 +36,13 @@ func shoot_at_angle(source, base_direction: Vector2, angle_offset: float, scene_
 func activate(source, target, scene_tree):
 	shoot(source, target, scene_tree)
 	
+	if not is_instance_valid(target):
+		return
+	
 	#for Triple needle
 	if is_evolved():
+		if not is_instance_valid(target):
+			return
 
 		var base_direction = (target.position - source.position).normalized()
 		shoot_at_angle(source, base_direction, deg_to_rad(30), scene_tree)
