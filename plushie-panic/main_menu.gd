@@ -22,8 +22,17 @@ func menu():
 	$Menu.show()
 	$Back.hide()
 	$HowToPlay.hide()
+	$Credits.hide()
 
 func how_to_play():
 	$HowToPlay.show()
 	$Menu.hide()
+	$Credits.hide()
 	$Back.show()
+	
+func credits():
+	$Credits.show()
+	$Back.show()
+	$Menu.hide()
+	$HowToPlay.hide()
+	

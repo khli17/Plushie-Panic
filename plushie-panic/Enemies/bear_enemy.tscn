@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://bny45xt1o3rhg"]
+
+[ext_resource type="Script" uid="uid://c8jce5uuq52hi" path="res://Enemies/bear_enemy.gd" id="1_k8vtn"]
+[ext_resource type="Texture2D" uid="uid://bahskab438fj1" path="res://Sprites/BearBoss.png" id="1_rhfdy"]
+[ext_resource type="Script" uid="uid://bxer5fme34ay3" path="res://Enemies/bear_animations.gd" id="3_gxcmh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ietwm"]
+atlas = ExtResource("1_rhfdy")
+region = Rect2(128, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8vtn"]
+atlas = ExtResource("1_rhfdy")
+region = Rect2(256, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxcmh"]
+atlas = ExtResource("1_rhfdy")
+region = Rect2(384, 0, 128, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idhy7"]
+atlas = ExtResource("1_rhfdy")
+region = Rect2(512, 0, 128, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mbqn3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ietwm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k8vtn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxcmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idhy7")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_idhy7"]
+radius = 53.0
+height = 174.0
+
+[node name="Bear_Enemy" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_k8vtn")
+
+[node name="BearAnimations" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_mbqn3")
+animation = &"walk"
+frame_progress = 0.85322624
+script = ExtResource("3_gxcmh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 9)
+shape = SubResource("CapsuleShape2D_idhy7")

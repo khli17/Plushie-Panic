@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dr8go2x25b0sh"]
+[gd_scene load_steps=58 format=3 uid="uid://dr8go2x25b0sh"]
 
 [ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/Player/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
@@ -231,6 +231,13 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
 radius = 20.880613
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gpjlu"]
+bg_color = Color(0.41774166, 0.9999997, 0.44121823, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
 
 [sub_resource type="Animation" id="Animation_00tjw"]
 length = 0.6
@@ -587,10 +594,11 @@ shape = SubResource("CircleShape2D_4flbx")
 
 [node name="Health" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = -29.0
+offset_left = -34.0
 offset_top = -38.0
-offset_right = 35.0
+offset_right = 30.0
 offset_bottom = -31.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_gpjlu")
 value = 100.0
 show_percentage = false
 

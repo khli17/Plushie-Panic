@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bm8wwfito3q3y"]
+[gd_scene load_steps=7 format=3 uid="uid://bm8wwfito3q3y"]
 
 [ext_resource type="Script" uid="uid://d0p2vfjsjafd2" path="res://Spawner.gd" id="1_00s5r"]
 [ext_resource type="PackedScene" uid="uid://d4mved3pthar7" path="res://Enemies/Bunny/bunny_enemy.tscn" id="2_00s5r"]
 [ext_resource type="PackedScene" uid="uid://yp7hwemcqcle" path="res://Enemies/Cat/cat_enemy.tscn" id="3_63vqd"]
 [ext_resource type="PackedScene" uid="uid://c5uuts3mfsw66" path="res://Enemies/Rat/rat_enemy.tscn" id="4_6fq3q"]
 [ext_resource type="PackedScene" uid="uid://dygvxdpt3lauf" path="res://Enemies/Dog/dog_enemy.tscn" id="4_nrau0"]
+[ext_resource type="PackedScene" uid="uid://bny45xt1o3rhg" path="res://Enemies/bear_enemy.tscn" id="6_oibxw"]
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_00s5r")
@@ -12,7 +13,7 @@ bunny = ExtResource("2_00s5r")
 cat = ExtResource("3_63vqd")
 rat = ExtResource("4_6fq3q")
 dog = ExtResource("4_nrau0")
-enemy_waves = []
+Boss = ExtResource("6_oibxw")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
