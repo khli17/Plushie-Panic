@@ -19,9 +19,11 @@ var elite : bool = false:
 	set(value):
 		elite = value
 		if value:
-			scale = Vector2(1.5,1.5)
+			scale = Vector2(2,2)
+			health += 10
+			speed *= 1.5
+			damage *= 1.5
 			
-
 @export var drops : Array[Pickups]
 
 @onready var player = get_node("/root/Game/Player")
