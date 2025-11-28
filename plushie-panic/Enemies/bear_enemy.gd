@@ -3,7 +3,7 @@ extends BaseEnemy
 func _ready():
 	health = 500;
 	damage = 15
-	speed = 50
+	speed = 75
 	
 	%BearAnimations. play_walk()
 	super._ready()

@@ -53,7 +53,7 @@ script = ExtResource("1_k8vtn")
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_mbqn3")
 animation = &"walk"
-frame_progress = 0.85322624
+frame_progress = 0.19155024
 script = ExtResource("3_gxcmh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

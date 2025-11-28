@@ -6,6 +6,7 @@ var health : float:
 	set(value):
 		health = value
 		if health <= 0:
+			await get_tree().create_timer(0.1).timeout #so the damage flash occurs before enemy dies
 			drop_item()
 			queue_free()
 var damage = 2
@@ -39,10 +40,9 @@ func _ready():
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
 	velocity = direction * speed
+	update_sprite_direction() 
+	
 	move_and_slide()
-	
-	
-	
 	#calls separation + knockback
 	check_separation(delta)
 	knockback_update(delta)

@@ -12,6 +12,8 @@ var enemy_waves = []
 var distance : float = 400
 var can_spawn : bool = true
 
+var boss_spawned : bool = false
+
 var minute : int:
 	set(value):
 		minute = value
@@ -97,12 +99,13 @@ func _on_pattern_timeout():
 
 
 func _on_boss_timeout() -> void:
-	if minute >= 10:
+	if minute >= 10 and not boss_spawned:
 		var boss_instance = Boss.instantiate()
 		boss_instance.position = get_random_position()
 		get_tree().current_scene.add_child(boss_instance)
 		
 		can_spawn = false
+		boss_spawned = true #for checking if boss spawned
 		
 
 
