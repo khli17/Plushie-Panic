@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c5uuts3mfsw66"]
+[gd_scene load_steps=11 format=3 uid="uid://c5uuts3mfsw66"]
 
 [ext_resource type="Script" uid="uid://bbghitbps5r5y" path="res://Enemies/Rat/rat_enemy.gd" id="1_1dfbv"]
 [ext_resource type="Texture2D" uid="uid://dnunllpe6y3lt" path="res://Sprites/RatEnemy.png" id="2_2yn1b"]
+[ext_resource type="Script" uid="uid://beiuosfkiwuba" path="res://PickupResource.gd" id="2_jkdg4"]
 [ext_resource type="Script" uid="uid://d0nc2j52lqt00" path="res://Enemies/Rat/rat_animations.gd" id="3_jkdg4"]
+[ext_resource type="Resource" uid="uid://dkysxlr8rgbju" path="res://Items/greenbutton.tres" id="3_namhu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3sax4"]
 atlas = ExtResource("2_2yn1b")
@@ -37,16 +39,17 @@ animations = [{
 radius = 16.0
 height = 54.0
 
-[node name="RatEnemy" type="CharacterBody2D"]
+[node name="RatEnemy" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_1dfbv")
+drops = Array[ExtResource("2_jkdg4")]([ExtResource("3_namhu")])
 
 [node name="RatAnimations" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_8f6rx")
 animation = &"walk"
-frame_progress = 0.25616658
+frame_progress = 0.41943556
 script = ExtResource("3_jkdg4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

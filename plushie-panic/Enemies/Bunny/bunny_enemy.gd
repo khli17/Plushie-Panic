@@ -4,7 +4,10 @@ func _ready():
 	health = 10;
 	damage = 2
 	speed = 50
-	%BunnyAnimations.play_walk()
+	if not elite:
+		%BunnyAnimations.play_walk()
+	else:
+		%BunnyAnimations. play_elite_walk()
 	super._ready()
 
 #flips bunny to face player

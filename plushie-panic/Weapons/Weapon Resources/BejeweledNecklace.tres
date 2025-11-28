@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Circular" load_steps=7 format=3 uid="uid://bun7lv8056qlu"]
+
+[ext_resource type="PackedScene" uid="uid://bxb45s565lweq" path="res://Weapons/Necklace/diamond.tscn" id="1_tl0qg"]
+[ext_resource type="PackedScene" uid="uid://dpg311hvx44ir" path="res://Weapons/Necklace/red_jewel.tscn" id="2_l5o2l"]
+[ext_resource type="PackedScene" uid="uid://6m1l1no2d2ys" path="res://Weapons/Necklace/purple_jewel.tscn" id="3_giyy2"]
+[ext_resource type="Script" uid="uid://coqx6bivrrh11" path="res://Weapons/CircularWeapon.gd" id="4_vmfnv"]
+[ext_resource type="Texture2D" uid="uid://b3ropqbhmerh1" path="res://Sprites/Weapons/Icons/BejeweledNecklace.jpg" id="5_chim2"]
+[ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="6_7nt51"]
+
+[resource]
+script = ExtResource("4_vmfnv")
+angular_speed = 100
+radius = 80
+amount = 6
+damage = 10.0
+cooldown = 2.0
+title = "Bejeweled Necklace"
+texture = ExtResource("5_chim2")
+metadata/_custom_type_script = "uid://coqx6bivrrh11"

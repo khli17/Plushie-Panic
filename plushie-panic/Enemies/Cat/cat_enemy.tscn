@@ -1,7 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://yp7hwemcqcle"]
+[gd_scene load_steps=11 format=3 uid="uid://yp7hwemcqcle"]
 
 [ext_resource type="Script" uid="uid://b14fdyyouuh6y" path="res://Enemies/Cat/cat_enemy.gd" id="1_h4jm3"]
+[ext_resource type="Script" uid="uid://beiuosfkiwuba" path="res://PickupResource.gd" id="2_c2yhu"]
 [ext_resource type="Texture2D" uid="uid://dbbnkpfy76x35" path="res://Sprites/Enemies/CatEnemy.png" id="2_gpp7d"]
+[ext_resource type="Resource" uid="uid://dkysxlr8rgbju" path="res://Items/greenbutton.tres" id="3_x2low"]
 [ext_resource type="Script" uid="uid://dxqqktbejqt10" path="res://Enemies/Cat/cat_animations.gd" id="3_ygjqb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gojb5"]
@@ -36,10 +38,11 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_oo6ym"]
 radius = 18.248287
 
-[node name="Cat_Enemy" type="CharacterBody2D"]
+[node name="Cat_Enemy" type="CharacterBody2D" groups=["Enemy"]]
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_h4jm3")
+drops = Array[ExtResource("2_c2yhu")]([ExtResource("3_x2low")])
 
 [node name="CatAnimations" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

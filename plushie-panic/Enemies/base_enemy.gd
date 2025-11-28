@@ -14,6 +14,12 @@ var is_damage : bool = false
 var knockback : Vector2
 var separation : float
 var drop = preload("res://pickups.tscn")
+var elite : bool = false:
+	set(value):
+		elite = value
+		if value:
+			scale = Vector2(1.5,1.5)
+			
 
 @export var drops : Array[Pickups]
 
@@ -41,7 +47,7 @@ func _physics_process(delta):
 		
 	#if separation is more than 500 from player, despawn enemies
 func check_separation(_delta):
-	separation = (player.position - player.position).length()
+	separation = (player.position - position).length()
 	if separation >= 500:
 		queue_free()
 	
@@ -53,7 +59,7 @@ func check_separation(_delta):
 func knockback_update(delta):
 	velocity = (player.position - position).normalized() * speed
 	knockback = knockback.move_toward(Vector2.ZERO, 1)
-	velocity += knockback
+	velocity += knockback 
 	
 	var collider = move_and_collide(velocity * delta)
 	if collider:
@@ -80,8 +86,8 @@ func drop_item():
 		return
 		
 	var item = drops.pick_random()
-	#if elite: #for an elite enemy
-		#item = load("res://Items/ChestDrop.tres")
+	if elite: #for an elite enemy
+		item = load("res://Items/ChestDrop.tres")
 	var item_to_drop = drop.instantiate()
 	
 	item_to_drop.type = item

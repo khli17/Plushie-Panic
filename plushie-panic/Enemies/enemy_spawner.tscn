@@ -40,13 +40,16 @@ text = "00"
 autostart = true
 
 [node name="Pattern" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 30.0
 autostart = true
 
 [node name="Boss" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
 
+[node name="Elite" type="Timer" parent="."]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Pattern" to="." method="_on_pattern_timeout"]
 [connection signal="timeout" from="Boss" to="." method="_on_boss_timeout"]
+[connection signal="timeout" from="Elite" to="." method="_on_elite_timeout"]

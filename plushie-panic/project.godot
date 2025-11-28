@@ -35,6 +35,10 @@ folder_colors={
 "res://Weapons/": "orange"
 }
 
+[global_group]
+
+Enemy=""
+
 [input]
 
 move_left={

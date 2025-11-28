@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://dr8go2x25b0sh"]
+[gd_scene load_steps=57 format=3 uid="uid://dr8go2x25b0sh"]
 
 [ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/Player/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://brhnunwd7rpex" path="res://Weapons/Push/push_weapon.tscn" id="5_k53q1"]
 [ext_resource type="Texture2D" uid="uid://cjs34dqcuptug" path="res://Sprites/UI Stuff/EXPBar/EXPBARPROGress.png" id="6_lfmf2"]
 [ext_resource type="Script" uid="uid://b7foi6r3t86kj" path="res://Player/options.gd" id="7_dkpta"]
+[ext_resource type="Resource" uid="uid://bmjmvjymtxamp" path="res://Items/Thread.tres" id="8_gpjlu"]
 [ext_resource type="Script" uid="uid://dl0bd1ns1l83b" path="res://Player/player_animations.gd" id="8_od3ui"]
 [ext_resource type="PackedScene" uid="uid://bqum5w8j2xeji" path="res://passive_slot.tscn" id="9_pisgm"]
 [ext_resource type="Resource" uid="uid://bsqrd0dllriui" path="res://Items/Yarn.tres" id="10_b1ygp"]
@@ -417,6 +418,7 @@ item = ExtResource("10_b1ygp")
 
 [node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("9_pisgm")]
 layout_mode = 2
+item = ExtResource("8_gpjlu")
 
 [node name="PassiveSlot3" parent="UI/PassiveItems" instance=ExtResource("9_pisgm")]
 layout_mode = 2
@@ -570,6 +572,7 @@ script = ExtResource("4_hqtel")
 zoom = Vector2(2, 2)
 
 [node name="Weapon_Push" parent="." node_paths=PackedStringArray("player") instance=ExtResource("5_k53q1")]
+visible = false
 player = NodePath("..")
 
 [node name="HitBoxDamage" type="Area2D" parent="."]

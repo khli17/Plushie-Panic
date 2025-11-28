@@ -1,0 +1,36 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=8 format=3 uid="uid://bmjmvjymtxamp"]
+
+[ext_resource type="Script" uid="uid://04lll2vvrc43" path="res://Items/PassiveItem.gd" id="1_y8cxt"]
+[ext_resource type="Texture2D" uid="uid://bffyfu21n250t" path="res://Sprites/Items/ThreadItem.jpg" id="2_top6o"]
+[ext_resource type="Script" uid="uid://b57318x5g3djv" path="res://Stats.gd" id="3_sv4ju"]
+
+[sub_resource type="Resource" id="Resource_beur6"]
+script = ExtResource("3_sv4ju")
+description = "x0.2 Growth"
+growth = 0.2
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[sub_resource type="Resource" id="Resource_rwpqj"]
+script = ExtResource("3_sv4ju")
+description = "x0.3 Growth"
+growth = 0.3
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[sub_resource type="Resource" id="Resource_gjk25"]
+script = ExtResource("3_sv4ju")
+description = "x0.4 Growth"
+growth = 0.4
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[sub_resource type="Resource" id="Resource_5u0q8"]
+script = ExtResource("3_sv4ju")
+description = "x0.5 Growth"
+growth = 0.5
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[resource]
+script = ExtResource("1_y8cxt")
+upgrades = Array[ExtResource("3_sv4ju")]([SubResource("Resource_beur6"), SubResource("Resource_rwpqj"), SubResource("Resource_gjk25"), SubResource("Resource_5u0q8")])
+title = "Thread"
+texture = ExtResource("2_top6o")
+metadata/_custom_type_script = "uid://04lll2vvrc43"

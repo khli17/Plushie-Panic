@@ -1,5 +1,4 @@
 extends Node2D
-class_name Enemy 
 
 @export var player : CharacterBody2D
 @export var bunny: PackedScene
@@ -43,7 +42,7 @@ func _physics_process(delta):
 	
 
 
-func spawn(position : Vector2):
+func spawn(position : Vector2, elite : bool = false):
 	if not can_spawn:
 		return
 		
@@ -54,6 +53,7 @@ func spawn(position : Vector2):
 	var enemy_instance = scene.instantiate()
 	
 	enemy_instance.position = position
+	enemy_instance.elite = elite
 	
 	get_tree().current_scene.add_child(enemy_instance)
 	
@@ -93,3 +93,7 @@ func _on_pattern_timeout():
 func _on_boss_timeout() -> void:
 	##spawn(get_random_position(), true)
 	pass
+
+
+func _on_elite_timeout() -> void:
+	spawn(get_random_position(), true)

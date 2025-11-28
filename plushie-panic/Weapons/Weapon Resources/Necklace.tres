@@ -1,55 +1,61 @@
-[gd_resource type="Resource" script_class="Circular" load_steps=12 format=3 uid="uid://c8c6goabtll2l"]
+[gd_resource type="Resource" script_class="Circular" load_steps=16 format=3 uid="uid://c8c6goabtll2l"]
 
-[ext_resource type="Script" uid="uid://coqx6bivrrh11" path="res://Weapons/CircularWeapon.gd" id="1_c0fp1"]
-[ext_resource type="PackedScene" uid="uid://bxb45s565lweq" path="res://Weapons/Necklace/diamond.tscn" id="1_q5unw"]
-[ext_resource type="Texture2D" uid="uid://b1ejbh02st3ko" path="res://Sprites/Weapons/Icons/Necklace.jpg" id="2_q5unw"]
-[ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="3_2777y"]
-[ext_resource type="Script" uid="uid://wgpdwtd8ye6t" path="res://Weapons/Weapon Upgrades/NecklaceUpgrade.gd" id="5_2777y"]
+[ext_resource type="PackedScene" uid="uid://bxb45s565lweq" path="res://Weapons/Necklace/diamond.tscn" id="1_7yd5b"]
+[ext_resource type="Resource" uid="uid://bun7lv8056qlu" path="res://Weapons/Weapon Resources/BejeweledNecklace.tres" id="1_ihoqj"]
+[ext_resource type="Resource" uid="uid://bmjmvjymtxamp" path="res://Items/Thread.tres" id="1_t6xow"]
+[ext_resource type="PackedScene" uid="uid://dpg311hvx44ir" path="res://Weapons/Necklace/red_jewel.tscn" id="2_t6xow"]
+[ext_resource type="PackedScene" uid="uid://6m1l1no2d2ys" path="res://Weapons/Necklace/purple_jewel.tscn" id="3_ihoqj"]
+[ext_resource type="Script" uid="uid://coqx6bivrrh11" path="res://Weapons/CircularWeapon.gd" id="4_ufggr"]
+[ext_resource type="Texture2D" uid="uid://b1ejbh02st3ko" path="res://Sprites/Weapons/Icons/Necklace.jpg" id="5_50rqn"]
+[ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="6_f5p5h"]
+[ext_resource type="Script" uid="uid://wgpdwtd8ye6t" path="res://Weapons/Weapon Upgrades/NecklaceUpgrade.gd" id="7_mxe0w"]
 
 [sub_resource type="Resource" id="Resource_u650h"]
-script = ExtResource("5_2777y")
+script = ExtResource("7_mxe0w")
 angular_speed = 5.0
 description = "+5 Speed"
 metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
 
 [sub_resource type="Resource" id="Resource_cifrs"]
-script = ExtResource("5_2777y")
+script = ExtResource("7_mxe0w")
 amount = 1
 description = "Add another jewel"
 metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
 
 [sub_resource type="Resource" id="Resource_1s4rw"]
-script = ExtResource("5_2777y")
+script = ExtResource("7_mxe0w")
 amount = 1
 description = "Add another jewel"
 metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
 
 [sub_resource type="Resource" id="Resource_ea52s"]
-script = ExtResource("5_2777y")
+script = ExtResource("7_mxe0w")
 damage = 5.0
 description = "+5 Damage"
 metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
 
 [sub_resource type="Resource" id="Resource_4i4os"]
-script = ExtResource("5_2777y")
+script = ExtResource("7_mxe0w")
 damage = 3.0
 description = "+3 Damage"
 metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
 
 [sub_resource type="Resource" id="Resource_q4lq1"]
-script = ExtResource("5_2777y")
+script = ExtResource("7_mxe0w")
 angular_speed = 5.0
 description = "+5 Speed"
 metadata/_custom_type_script = "uid://wgpdwtd8ye6t"
 
 [resource]
-script = ExtResource("1_c0fp1")
+script = ExtResource("4_ufggr")
 angular_speed = 90
 radius = 75
 damage = 5.0
 cooldown = 3.0
-projectile_node = ExtResource("1_q5unw")
-upgrades = Array[ExtResource("3_2777y")]([SubResource("Resource_u650h"), SubResource("Resource_cifrs"), SubResource("Resource_1s4rw"), SubResource("Resource_ea52s"), SubResource("Resource_4i4os"), SubResource("Resource_q4lq1"), null, null])
+projectile_node = ExtResource("1_7yd5b")
+upgrades = Array[ExtResource("6_f5p5h")]([SubResource("Resource_u650h"), SubResource("Resource_cifrs"), SubResource("Resource_1s4rw"), SubResource("Resource_ea52s"), SubResource("Resource_4i4os"), SubResource("Resource_q4lq1"), null, null])
+item_needed = ExtResource("1_t6xow")
+evolution = ExtResource("1_ihoqj")
 title = "Necklace"
-texture = ExtResource("2_q5unw")
+texture = ExtResource("5_50rqn")
 metadata/_custom_type_script = "uid://coqx6bivrrh11"
