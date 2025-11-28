@@ -20,6 +20,11 @@ region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1yjwa"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"elite_walk",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gojb5")
@@ -47,9 +52,7 @@ drops = Array[ExtResource("2_c2yhu")]([ExtResource("3_x2low")])
 [node name="CatAnimations" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_1yjwa")
-animation = &"walk"
-frame = 2
-frame_progress = 0.6724376
+animation = &"elite_walk"
 script = ExtResource("3_ygjqb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

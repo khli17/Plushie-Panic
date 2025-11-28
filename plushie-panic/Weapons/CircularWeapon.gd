@@ -45,11 +45,14 @@ func update(delta):
 		#projectile_reference[i].show()
 		
 func reset():
-	for i in range(projectile_reference.size()):
-		projectile_reference.pop_front().queue_free()
+	for i in projectile_reference:
+		if is_instance_valid(i):
+			i.queue_free()
+	projectile_reference.clear()
 
 func upgrade_item():
 	if max_level_reached():
+		reset()
 		slot.item = evolution
 		return
 		

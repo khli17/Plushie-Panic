@@ -82,7 +82,7 @@ func amount(number: int = 1):
 
 func _on_timer_timeout():
 	second += 1
-	amount(second % 10)
+	amount(second % 20)
 
 
 func _on_pattern_timeout():
