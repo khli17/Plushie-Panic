@@ -15,10 +15,8 @@ var angle : float
 ]
 
 func activate(source, _target, _scene_tree):
-	reset()
 	
-	#activating this weapon will add projectile to player source
-	for i in range(amount):
+	while projectile_reference.size() < amount:
 		add_to_player(source)
 
 func add_to_player(source):
@@ -43,10 +41,11 @@ func update(delta):
 		projectile_reference[i].position = radius * Vector2(cos(deg_to_rad(angle+offset)), sin(deg_to_rad(angle+offset)))
 		
 		#projectile_reference[i].show()
-		
+	
 func reset():
-	for i in range(projectile_reference.size()):
-		projectile_reference.pop_front().queue_free()
+	for projectile in projectile_reference:
+		projectile.queue_free()
+	projectile_reference.clear()
 
 func upgrade_item():
 	if max_level_reached():
@@ -63,4 +62,5 @@ func upgrade_item():
 	damage += upgrade.damage
 	
 	level += 1
+	
 	

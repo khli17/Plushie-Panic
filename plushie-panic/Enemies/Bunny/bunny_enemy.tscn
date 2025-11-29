@@ -1,31 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://d4mved3pthar7"]
+[gd_scene load_steps=13 format=3 uid="uid://d4mved3pthar7"]
 
 [ext_resource type="Script" uid="uid://bgk2doud2m2jk" path="res://Enemies/Bunny/bunny_enemy.gd" id="1_dtle2"]
 [ext_resource type="Texture2D" uid="uid://ccuhsxkpqxiir" path="res://Sprites/Enemies/Bunny/bunnyEnemy.png" id="1_vivkj"]
 [ext_resource type="Script" uid="uid://beiuosfkiwuba" path="res://PickupResource.gd" id="2_3hox3"]
 [ext_resource type="Script" uid="uid://bnjb2waujw67w" path="res://Enemies/Bunny/BunnyAnimations.gd" id="2_nk4wg"]
 [ext_resource type="Resource" uid="uid://dkysxlr8rgbju" path="res://Items/greenbutton.tres" id="3_x2sx8"]
-[ext_resource type="Texture2D" uid="uid://emj04glbnup3" path="res://Sprites/Enemies/Bunny/BunnyEnemyElite.png" id="4_kgoxw"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yf4av"]
-atlas = ExtResource("4_kgoxw")
-region = Rect2(0, 0, 128, 160)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xb84j"]
-atlas = ExtResource("4_kgoxw")
-region = Rect2(128, 0, 128, 160)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ef341"]
-atlas = ExtResource("4_kgoxw")
-region = Rect2(256, 0, 128, 160)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6k3ya"]
-atlas = ExtResource("4_kgoxw")
-region = Rect2(384, 0, 128, 160)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n6jjx"]
-atlas = ExtResource("4_kgoxw")
-region = Rect2(512, 0, 128, 160)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nk4wg"]
 atlas = ExtResource("1_vivkj")
@@ -49,26 +28,6 @@ region = Rect2(256, 0, 64, 80)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_26wss"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yf4av")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xb84j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ef341")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6k3ya")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n6jjx")
-}],
-"loop": true,
-"name": &"elite_walk",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nk4wg")
@@ -102,7 +61,7 @@ drops = Array[ExtResource("2_3hox3")]([ExtResource("3_x2sx8")])
 [node name="BunnyAnimations" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_26wss")
-animation = &"elite_walk"
+animation = &"walk"
 script = ExtResource("2_nk4wg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

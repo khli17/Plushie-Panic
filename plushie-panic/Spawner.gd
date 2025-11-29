@@ -91,6 +91,13 @@ func amount(number: int = 1):
 func _on_timer_timeout():
 	second += 1
 	amount(1)
+	
+	var total_seconds = minute * 60 + second
+	
+	if total_seconds >= 590 and total_seconds <= 600:
+		%BossWarning.visible = true
+	else:
+		%BossWarning.visible = false
 
 
 func _on_pattern_timeout():
@@ -107,7 +114,5 @@ func _on_boss_timeout() -> void:
 		can_spawn = false
 		boss_spawned = true #for checking if boss spawned
 		
-
-
 func _on_elite_timeout() -> void:
 	spawn(get_random_position(), true)
