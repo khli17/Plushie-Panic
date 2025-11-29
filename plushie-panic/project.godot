@@ -27,6 +27,7 @@ enabled=PackedStringArray("res://addons/AS2P/plugin.cfg")
 [file_customization]
 
 folder_colors={
+"res://Audio/": "yellow",
 "res://Enemies/": "red",
 "res://Items/": "purple",
 "res://Player/": "pink",

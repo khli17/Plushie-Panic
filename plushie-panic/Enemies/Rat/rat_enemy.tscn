@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://c5uuts3mfsw66"]
 
 [ext_resource type="Script" uid="uid://bbghitbps5r5y" path="res://Enemies/Rat/rat_enemy.gd" id="1_1dfbv"]
-[ext_resource type="Texture2D" uid="uid://dnunllpe6y3lt" path="res://Sprites/RatEnemy.png" id="2_2yn1b"]
+[ext_resource type="Texture2D" uid="uid://dnunllpe6y3lt" path="res://Sprites/Enemies/RatEnemy.png" id="2_2yn1b"]
 [ext_resource type="Script" uid="uid://beiuosfkiwuba" path="res://PickupResource.gd" id="2_jkdg4"]
 [ext_resource type="Script" uid="uid://d0nc2j52lqt00" path="res://Enemies/Rat/rat_animations.gd" id="3_jkdg4"]
 [ext_resource type="Resource" uid="uid://dkysxlr8rgbju" path="res://Items/greenbutton.tres" id="3_namhu"]

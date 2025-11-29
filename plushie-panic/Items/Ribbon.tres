@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=9 format=3 uid="uid://c5vl2588oekk1"]
+
+[ext_resource type="Script" uid="uid://04lll2vvrc43" path="res://Items/PassiveItem.gd" id="1_jcp4w"]
+[ext_resource type="Texture2D" uid="uid://wmo1o2u87cc5" path="res://Sprites/Items/Ribbon.jpg" id="2_v0py3"]
+[ext_resource type="Script" uid="uid://b57318x5g3djv" path="res://Stats.gd" id="3_aykxx"]
+
+[sub_resource type="Resource" id="Resource_vji0h"]
+script = ExtResource("3_aykxx")
+description = "x0.5 Speed"
+movement_speed = 0.5
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[sub_resource type="Resource" id="Resource_kx0j5"]
+script = ExtResource("3_aykxx")
+description = "x0.6 Speed"
+movement_speed = 0.6
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[sub_resource type="Resource" id="Resource_4rb1a"]
+script = ExtResource("3_aykxx")
+description = "x0.4 Speed"
+movement_speed = 0.4
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[sub_resource type="Resource" id="Resource_glgra"]
+script = ExtResource("3_aykxx")
+description = "x0.3 Speed"
+movement_speed = 0.3
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[sub_resource type="Resource" id="Resource_y2wbg"]
+script = ExtResource("3_aykxx")
+description = "x0.2 Speed"
+movement_speed = 0.2
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[resource]
+script = ExtResource("1_jcp4w")
+upgrades = Array[ExtResource("3_aykxx")]([SubResource("Resource_vji0h"), SubResource("Resource_kx0j5"), SubResource("Resource_4rb1a"), SubResource("Resource_glgra"), SubResource("Resource_y2wbg")])
+title = "Ribbon"
+texture = ExtResource("2_v0py3")
+metadata/_custom_type_script = "uid://04lll2vvrc43"

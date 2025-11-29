@@ -3,6 +3,18 @@ class_name PushWeapon
 
 var evolved : bool = false #to track if weapon has evolved
 
+var push_area: Area2D
+var facing_left = false
+
+func activate(source, target, scene_tree):
+	if push_area == null:
+		push_area = projectile_node.instantiate()
+		push_area.damage = damage
+		push_area.weapon = self
+		source.add_child(push_area)
+		
+		push_area.position = Vector2(20,0)
+
 func shoot(source, target, scene_tree):
 	if target == null:
 		return

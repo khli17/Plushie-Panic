@@ -43,3 +43,8 @@ func max_level_reached():
 		return true
 	return false
 	
+func update(_delta):
+	pass
+	
+func reset():
+	pass

@@ -47,5 +47,6 @@ projectile_node = ExtResource("1_altkx")
 upgrades = Array[ExtResource("6_6b5vq")]([SubResource("Resource_d728y"), SubResource("Resource_d8h7j"), SubResource("Resource_c1xyi"), SubResource("Resource_rp84t"), SubResource("Resource_7iehv")])
 item_needed = ExtResource("2_qu8mr")
 evolution = ExtResource("1_qu8mr")
+title = "Needle"
 texture = ExtResource("3_qu8mr")
 metadata/_custom_type_script = "uid://18rjpkbvym2w"

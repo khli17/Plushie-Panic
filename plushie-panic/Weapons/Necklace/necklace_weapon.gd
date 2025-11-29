@@ -10,7 +10,7 @@ func _ready():
 	
 func _physics_process(delta):
 	position += direction * speed * delta
-
+	
 #calls take_damage function if the interacting body has one
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):
@@ -19,7 +19,7 @@ func _on_body_entered(body: Node2D) -> void:
 		else:
 			body.take_damage(damage)
 		body.knockback = direction * 100
-
+		
 #when needle goes offstream, removes it
 func _on_screen_exited() -> void:
 	queue_free()

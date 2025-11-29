@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="DamagingArea" load_steps=5 format=3 uid="uid://c651smv0t2b3t"]
+
+[ext_resource type="PackedScene" uid="uid://bhmomqownolly" path="res://Weapons/area_projectile.tscn" id="1_3raxc"]
+[ext_resource type="Script" uid="uid://cfx5g7fqsx73a" path="res://DamagingArea.gd" id="1_4vitr"]
+[ext_resource type="Texture2D" uid="uid://cssuumica88gi" path="res://Sprites/PaintBottle.jpg" id="2_3raxc"]
+[ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="3_v8twa"]
+
+[resource]
+script = ExtResource("1_4vitr")
+damage = 1.0
+cooldown = 1.3
+projectile_node = ExtResource("1_3raxc")
+title = "Paint Bottle"
+texture = ExtResource("2_3raxc")
+metadata/_custom_type_script = "uid://cfx5g7fqsx73a"

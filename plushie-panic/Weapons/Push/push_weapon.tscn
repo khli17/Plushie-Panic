@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cgbkwqydnt8u3" path="res://Weapons/Push/push_weapon.gd" id="1_3ewlt"]
 [ext_resource type="Texture2D" uid="uid://c3123mqo0nrmt" path="res://Sprites/Weapons/spr_push_strip6.png" id="1_up55t"]
 [ext_resource type="Script" uid="uid://dcke8f61d53k1" path="res://Weapons/Push/push_animations.gd" id="2_3ewlt"]
-[ext_resource type="Texture2D" uid="uid://4f01edxu3rf0" path="res://Sprites/PushEvo.png" id="3_chtyf"]
+[ext_resource type="Texture2D" uid="uid://4f01edxu3rf0" path="res://Sprites/Weapons/PushEvo.png" id="3_chtyf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8hrhw"]
 atlas = ExtResource("1_up55t")
@@ -113,14 +113,10 @@ script = ExtResource("1_3ewlt")
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_v1a1e")
 animation = &"attack_evolve"
-frame = 5
-frame_progress = 0.93335396
+frame_progress = 0.56744564
 offset = Vector2(78, 0)
 script = ExtResource("2_3ewlt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(87, 5)
 shape = SubResource("CapsuleShape2D_3ewlt")
-
-[node name="Timer" type="Timer" parent="."]
-autostart = true

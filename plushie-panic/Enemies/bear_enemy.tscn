@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://bny45xt1o3rhg"]
 
 [ext_resource type="Script" uid="uid://c8jce5uuq52hi" path="res://Enemies/bear_enemy.gd" id="1_k8vtn"]
-[ext_resource type="Texture2D" uid="uid://bahskab438fj1" path="res://Sprites/BearBoss.png" id="1_rhfdy"]
+[ext_resource type="Texture2D" uid="uid://bahskab438fj1" path="res://Sprites/Enemies/BearBoss.png" id="1_rhfdy"]
 [ext_resource type="Script" uid="uid://bxer5fme34ay3" path="res://Enemies/bear_animations.gd" id="3_gxcmh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ietwm"]
