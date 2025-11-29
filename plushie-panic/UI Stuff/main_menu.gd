@@ -20,8 +20,6 @@ func _on_credits_pressed() -> void:
 func _on_back_pressed() -> void:
 	menu()
 
-
-
 func menu():
 	$Menu.show()
 	$Back.hide()
