@@ -9,67 +9,53 @@ var facing_left = false
 func activate(source, target, scene_tree):
 	if push_area == null:
 		push_area = projectile_node.instantiate()
+		push_area.player = source
 		push_area.damage = damage
 		push_area.weapon = self
 		source.add_child(push_area)
 		
 		push_area.position = Vector2(20,0)
-
-func shoot(source, target, scene_tree):
-	if target == null:
-		return
 		
-	var projectile = projectile_node.instantiate()
+	push_area.do_push()
 	
-	#setting projectile properties
-	projectile.position = source.position
-	projectile.damage = damage
-	projectile.speed = speed
-	projectile.source = source
-	projectile.direction = (target.position - source.position).normalized()
+	_update_direction(source)
 	
-	#adding to scene tree
-	scene_tree.current_scene.add_child(projectile)
-	
-#for evolved Triple Needle to shoot at different angles compared to regular needle shot	
-func shoot_at_angle(source, base_direction: Vector2, angle_offset: float, scene_tree):
-	var projectile = projectile_node.instantiate()
-	var rotated_direction = base_direction.rotated(angle_offset)
-	
-	projectile.position = source.position
-	projectile.damage = damage
-	projectile.speed = speed
-	projectile.source = source
-	projectile.direction = rotated_direction
-	
-	scene_tree.current_scene.add_child(projectile)
+func _update_direction(source):
+	var direction = source.get_facing_direction()
+	if direction.x <0 and not facing_left:
+		facing_left = true
+		push_area.scale.x = -1
+	elif direction.x > 0 and facing_left:
+		facing_left = false
+		push_area.scale.x = 1 
 
-#override the activate func and call shoot
-func activate(source, target, scene_tree):
-	shoot(source, target, scene_tree)
-	
-	#for Triple needle
-	if is_evolved():
-
-		var base_direction = (target.position - source.position).normalized()
-		shoot_at_angle(source, base_direction, deg_to_rad(30), scene_tree)
-		shoot_at_angle(source, base_direction, deg_to_rad(-30), scene_tree)
+#func shoot(source, target, scene_tree):
+	#if target == null:
+		#return
+		#
+	#var projectile = projectile_node.instantiate()
+	#
+	##setting projectile properties
+	#projectile.position = source.position
+	#projectile.damage = damage
+	#projectile.speed = speed
+	#projectile.source = source
+	#projectile.direction = (target.position - source.position).normalized()
+	#
+	##adding to scene tree
+	#scene_tree.current_scene.add_child(projectile)
 
 
 func upgrade_item():
 	if max_level_reached():
 		slot.item = evolution
-		slot.item.evolved = true
 		return
 		
 	if not is_upgradeable():
 		return
 	
 	var upgrade = upgrades[level -1]
-	
 	damage += upgrade.damage
-	cooldown += upgrade.cooldown
-	speed += upgrade.speed
 	
 	level += 1
 	

@@ -71,6 +71,7 @@ func knockback_update(delta):
 
 #enemy takes damage
 func take_damage(amount):
+	amount = int(amount)
 	apply_damage_flash()
 	damage_popup(amount)
 	health -= amount

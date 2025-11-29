@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=6 format=3 uid="uid://ctwu758sb5ki4"]
+
+[ext_resource type="Script" uid="uid://edt55c7hcvi0" path="res://Weapons/Weapon.gd" id="1_1jl58"]
+[ext_resource type="Resource" uid="uid://bbyg432aktuic" path="res://Pillow.tres" id="1_nmhru"]
+[ext_resource type="Texture2D" uid="uid://lno53iskwgfs" path="res://Sprites/DoubleScissor.jpg" id="2_cni40"]
+[ext_resource type="PackedScene" uid="uid://bfstcnnvrwtyc" path="res://Weapons/scissors_weapon.tscn" id="2_ya7tl"]
+[ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="3_nmhru"]
+
+[resource]
+script = ExtResource("1_1jl58")
+damage = 15.0
+cooldown = 3.0
+speed = 400.0
+projectile_node = ExtResource("2_ya7tl")
+item_needed = ExtResource("1_nmhru")
+title = "DoubleScissors"
+texture = ExtResource("2_cni40")
+metadata/_custom_type_script = "uid://edt55c7hcvi0"

@@ -6,32 +6,32 @@
 
 [sub_resource type="Resource" id="Resource_vji0h"]
 script = ExtResource("3_aykxx")
-description = "x0.5 Speed"
-movement_speed = 0.5
+description = "+5 Speed"
+movement_speed = 5.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_kx0j5"]
 script = ExtResource("3_aykxx")
-description = "x0.6 Speed"
-movement_speed = 0.6
+description = "+10 Speed"
+movement_speed = 10.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_4rb1a"]
 script = ExtResource("3_aykxx")
-description = "x0.4 Speed"
-movement_speed = 0.4
+description = "+3 Speed"
+movement_speed = 3.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_glgra"]
 script = ExtResource("3_aykxx")
-description = "x0.3 Speed"
-movement_speed = 0.3
+description = "+15 Speed"
+movement_speed = 15.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_y2wbg"]
 script = ExtResource("3_aykxx")
-description = "x0.2 Speed"
-movement_speed = 0.2
+description = "+12 Speed"
+movement_speed = 12.0
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [resource]

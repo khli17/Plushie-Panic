@@ -101,8 +101,8 @@ func _on_timer_timeout() -> void:
 	
 #exp function
 func gain_EXP(amount):
-	EXP += amount * growth
-	total_EXP += amount * growth
+	EXP += amount * (1 + growth)
+	total_EXP += amount * (1 + growth)
 	
 #check EXp and increase level
 func check_EXP():

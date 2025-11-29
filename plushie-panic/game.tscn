@@ -347,5 +347,4 @@ color = Color(0.633229, 0.60425144, 0.9763748, 1)
 position = Vector2(425, 252)
 
 [node name="EnemySpawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_feb5d")]
-visible = false
 player = NodePath("../Player")

@@ -3,6 +3,8 @@ extends PanelContainer
 
 @export var item : Weapon: 
 	set(value):
+		if item != null and item.has_method("reset"):
+			item.reset()
 		item = value
 		$TextureRect.texture = value.texture
 		$Cooldown.wait_time = value.cooldown

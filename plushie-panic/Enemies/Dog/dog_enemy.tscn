@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dygvxdpt3lauf"]
+[gd_scene load_steps=13 format=3 uid="uid://dygvxdpt3lauf"]
 
 [ext_resource type="Script" uid="uid://bvlala4i3j3a" path="res://Enemies/Dog/dog_enemy.gd" id="1_1eimh"]
 [ext_resource type="Texture2D" uid="uid://bt47406b0c4su" path="res://Sprites/Enemies/DogEnemy.png" id="1_sr0n8"]
 [ext_resource type="Script" uid="uid://beiuosfkiwuba" path="res://PickupResource.gd" id="2_wd30m"]
 [ext_resource type="Script" uid="uid://bw8hjuc56shjm" path="res://Enemies/Dog/dog_animations.gd" id="2_ydcog"]
 [ext_resource type="Resource" uid="uid://dkysxlr8rgbju" path="res://Items/greenbutton.tres" id="3_vaivc"]
+[ext_resource type="Resource" uid="uid://bym8h4xrqfe2s" path="res://Items/Misc/HeartButton.tres" id="4_vaivc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ydcog"]
 atlas = ExtResource("1_sr0n8")
@@ -50,7 +51,7 @@ height = 110.0
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_1eimh")
-drops = Array[ExtResource("2_wd30m")]([ExtResource("3_vaivc")])
+drops = Array[ExtResource("2_wd30m")]([ExtResource("3_vaivc"), ExtResource("4_vaivc")])
 
 [node name="DogAnimations" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true

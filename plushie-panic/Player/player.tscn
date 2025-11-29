@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://dr8go2x25b0sh"]
+[gd_scene load_steps=57 format=3 uid="uid://dr8go2x25b0sh"]
 
 [ext_resource type="Texture2D" uid="uid://dgsu4te6luwgf" path="res://Sprites/Player/RiaIdle.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://binp0qt343e8g" path="res://Player/player.gd" id="1_onrkg"]
@@ -10,15 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://2y5td5rq5f25" path="res://Sprites/Player/RiaDamageRun.png" id="4_fhl08"]
 [ext_resource type="Texture2D" uid="uid://c3mx7paci6ubv" path="res://Sprites/UI Stuff/EXPBar/EXPBARUNDER.png" id="4_gu6f8"]
 [ext_resource type="Script" uid="uid://3ucaomt5j3m0" path="res://Player/player_2d_animation.gd" id="4_hqtel"]
+[ext_resource type="Resource" uid="uid://b40vbgywdc1ri" path="res://Weapons/Weapon Resources/Scissors.tres" id="5_7emwf"]
 [ext_resource type="Texture2D" uid="uid://cadr0n1m3w2qn" path="res://Sprites/UI Stuff/EXPBar/EXPBAR.png" id="5_dkpta"]
-[ext_resource type="Resource" uid="uid://c8c6goabtll2l" path="res://Weapons/Weapon Resources/Necklace.tres" id="5_hshwv"]
 [ext_resource type="PackedScene" uid="uid://brhnunwd7rpex" path="res://Weapons/Push/push_weapon.tscn" id="5_k53q1"]
+[ext_resource type="Resource" uid="uid://cs5p8pfj3yu4p" path="res://Weapons/Weapon Resources/PaintBottle.tres" id="6_8mwp6"]
 [ext_resource type="Texture2D" uid="uid://cjs34dqcuptug" path="res://Sprites/UI Stuff/EXPBar/EXPBARPROGress.png" id="6_lfmf2"]
 [ext_resource type="Script" uid="uid://b7foi6r3t86kj" path="res://Player/options.gd" id="7_dkpta"]
-[ext_resource type="Resource" uid="uid://bmjmvjymtxamp" path="res://Items/Thread.tres" id="8_gpjlu"]
 [ext_resource type="Script" uid="uid://dl0bd1ns1l83b" path="res://Player/player_animations.gd" id="8_od3ui"]
 [ext_resource type="PackedScene" uid="uid://bqum5w8j2xeji" path="res://passive_slot.tscn" id="9_pisgm"]
-[ext_resource type="Resource" uid="uid://bsqrd0dllriui" path="res://Items/Yarn.tres" id="10_b1ygp"]
 [ext_resource type="Texture2D" uid="uid://bvjmrdmi7dg2f" path="res://Sprites/Drops/Chest.png" id="11_7emwf"]
 [ext_resource type="Texture2D" uid="uid://t6bky8myoubm" path="res://Sprites/Misc/Shadow.png" id="11_apopc"]
 [ext_resource type="Script" uid="uid://clfssfb14eniy" path="res://Player/chest.gd" id="11_hshwv"]
@@ -408,9 +407,13 @@ item = ExtResource("3_apopc")
 
 [node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_x3vf3")]
 layout_mode = 2
-item = ExtResource("5_hshwv")
+item = ExtResource("5_7emwf")
 
 [node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_x3vf3")]
+layout_mode = 2
+item = ExtResource("6_8mwp6")
+
+[node name="Slot4" parent="UI/Weapons" instance=ExtResource("2_x3vf3")]
 layout_mode = 2
 
 [node name="PassiveItems" type="HBoxContainer" parent="UI"]
@@ -421,13 +424,14 @@ offset_bottom = 199.0
 
 [node name="PassiveSlot" parent="UI/PassiveItems" instance=ExtResource("9_pisgm")]
 layout_mode = 2
-item = ExtResource("10_b1ygp")
 
 [node name="PassiveSlot2" parent="UI/PassiveItems" instance=ExtResource("9_pisgm")]
 layout_mode = 2
-item = ExtResource("8_gpjlu")
 
 [node name="PassiveSlot3" parent="UI/PassiveItems" instance=ExtResource("9_pisgm")]
+layout_mode = 2
+
+[node name="PassiveSlot4" parent="UI/PassiveItems" instance=ExtResource("9_pisgm")]
 layout_mode = 2
 
 [node name="EXP" type="TextureProgressBar" parent="UI"]

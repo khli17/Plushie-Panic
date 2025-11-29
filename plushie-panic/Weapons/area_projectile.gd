@@ -21,7 +21,3 @@ func _on_body_entered(body: Node2D) -> void:
 		else:
 			body.take_damage(damage)
 		body.knockback = direction * knockback
-
-#when needle goes offstream, removes it
-func _on_screen_exited() -> void:
-	queue_free()

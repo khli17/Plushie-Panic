@@ -113,10 +113,12 @@ script = ExtResource("1_3ewlt")
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_v1a1e")
 animation = &"attack_evolve"
-frame_progress = 0.56744564
+frame_progress = 0.97730887
 offset = Vector2(78, 0)
 script = ExtResource("2_3ewlt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(87, 5)
 shape = SubResource("CapsuleShape2D_3ewlt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
