@@ -10,8 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://2y5td5rq5f25" path="res://Sprites/Player/RiaDamageRun.png" id="4_fhl08"]
 [ext_resource type="Texture2D" uid="uid://c3mx7paci6ubv" path="res://Sprites/UI Stuff/EXPBar/EXPBARUNDER.png" id="4_gu6f8"]
 [ext_resource type="Script" uid="uid://3ucaomt5j3m0" path="res://Player/player_2d_animation.gd" id="4_hqtel"]
-[ext_resource type="Resource" uid="uid://b40vbgywdc1ri" path="res://Weapons/Weapon Resources/Scissors.tres" id="5_7emwf"]
 [ext_resource type="Texture2D" uid="uid://cadr0n1m3w2qn" path="res://Sprites/UI Stuff/EXPBar/EXPBAR.png" id="5_dkpta"]
+[ext_resource type="Resource" uid="uid://dqs83vuh1vlwp" path="res://Weapons/Push.tres" id="5_hshwv"]
 [ext_resource type="PackedScene" uid="uid://brhnunwd7rpex" path="res://Weapons/Push/push_weapon.tscn" id="5_k53q1"]
 [ext_resource type="Resource" uid="uid://cs5p8pfj3yu4p" path="res://Weapons/Weapon Resources/PaintBottle.tres" id="6_8mwp6"]
 [ext_resource type="Texture2D" uid="uid://cjs34dqcuptug" path="res://Sprites/UI Stuff/EXPBar/EXPBARPROGress.png" id="6_lfmf2"]
@@ -407,7 +407,7 @@ item = ExtResource("3_apopc")
 
 [node name="Slot2" parent="UI/Weapons" instance=ExtResource("2_x3vf3")]
 layout_mode = 2
-item = ExtResource("5_7emwf")
+item = ExtResource("5_hshwv")
 
 [node name="Slot3" parent="UI/Weapons" instance=ExtResource("2_x3vf3")]
 layout_mode = 2

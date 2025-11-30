@@ -6,16 +6,11 @@ var speed : float = 150
 var weapon
 var pushing = false
 
-@onready var hitbox = $ColllisionShape2D
+@onready var hitbox = $CollisionShape2D
 
 func _physics_process(delta):
 	%PushAnimations.play_attack()
 		
-	if player.face_right:
-		%PushAnimations.scale.x = -1
-	else:
-		%PushAnimations.scale.x = 1
-
 func push():
 	if pushing:
 		return
@@ -28,7 +23,7 @@ func push():
 	
 	%PushAnimations.play_attack()
 	
-	await %PushAnimations.play_attack().animation_finished
+	await %PushAnimations.animation_finished
 	
 	hitbox.disabled = true
 	

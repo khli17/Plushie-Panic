@@ -120,3 +120,6 @@ func gain_gems(amount):
 	
 func open_chest():
 	$UI/Chest.open() 
+
+func get_facing_direction() -> Vector2:
+	return Vector2(1, 0) if face_right else Vector2(-1, 0)

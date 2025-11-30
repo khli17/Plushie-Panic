@@ -16,7 +16,7 @@ func activate(source, target, scene_tree):
 		
 		push_area.position = Vector2(20,0)
 		
-	push_area.do_push()
+	push_area.push()
 	
 	_update_direction(source)
 	
@@ -24,10 +24,10 @@ func _update_direction(source):
 	var direction = source.get_facing_direction()
 	if direction.x <0 and not facing_left:
 		facing_left = true
-		push_area.scale.x = -1
+		push_area.scale.x = 1
 	elif direction.x > 0 and facing_left:
 		facing_left = false
-		push_area.scale.x = 1 
+		push_area.scale.x = -1 
 
 #func shoot(source, target, scene_tree):
 	#if target == null:
