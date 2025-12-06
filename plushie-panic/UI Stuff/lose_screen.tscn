@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=3 uid="uid://2yylyk85w7vu"]
+
+[ext_resource type="Texture2D" uid="uid://djyj107bqy35f" path="res://Sprites/UI Stuff/YouLost.png" id="1_h77ug"]
+[ext_resource type="Script" uid="uid://cts28xkn71t87" path="res://UI Stuff/lose_screen.gd" id="1_jh3fo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jh3fo"]
+bg_color = Color(1, 0.4, 0.8862745, 1)
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.66015625, 0.13925171, 0.615391, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7fqd3"]
+
+[node name="LoseScreen" type="CanvasLayer"]
+script = ExtResource("1_jh3fo")
+
+[node name="Lose" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.67058825)
+
+[node name="YouLost" type="Sprite2D" parent="Lose"]
+position = Vector2(640, 360)
+texture = ExtResource("1_h77ug")
+
+[node name="Retry" type="Button" parent="Lose"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = -310.0
+offset_right = 135.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_jh3fo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7fqd3")
+text = "Retry"
+
+[node name="Menu" type="Button" parent="Lose"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = -210.0
+offset_right = 135.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_jh3fo")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7fqd3")
+text = "Main Menu"
+
+[connection signal="pressed" from="Lose/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="Lose/Menu" to="." method="_on_menu_pressed"]

@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://dwf0gqhiqbcnd"]
+
+[ext_resource type="Script" uid="uid://b04ft2tfypk4p" path="res://UI Stuff/win_screen.gd" id="1_vq2fd"]
+[ext_resource type="Texture2D" uid="uid://dfs64b84ewxja" path="res://Sprites/AnotherMenuUIAgain.png" id="2_pjcts"]
+[ext_resource type="Texture2D" uid="uid://cckr2ci5238d5" path="res://Sprites/UI Stuff/You Won.png" id="3_jh18h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1txte"]
+texture = ExtResource("2_pjcts")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26557"]
+bg_color = Color(1, 0.4, 0.8862745, 1)
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.66015625, 0.13925171, 0.615391, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_luvg0"]
+
+[node name="WinScreen" type="CanvasLayer"]
+script = ExtResource("1_vq2fd")
+
+[node name="Win" type="Panel" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1txte")
+
+[node name="YouWon" type="Sprite2D" parent="Win"]
+position = Vector2(639, 361)
+texture = ExtResource("3_jh18h")
+
+[node name="GemDisplay" type="Label" parent="Win"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 451.0
+offset_top = 383.0
+offset_right = 866.0
+offset_bottom = 434.0
+theme_override_font_sizes/font_size = 30
+text = "Collected Gems: "
+
+[node name="Replay" type="Button" parent="Win"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -278.0
+offset_right = 130.0
+offset_bottom = -208.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_26557")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_luvg0")
+text = "Play Again"
+
+[node name="Menu" type="Button" parent="Win"]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -140.0
+offset_top = -178.0
+offset_right = 130.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_26557")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_luvg0")
+text = "Main Menu"
+
+[connection signal="pressed" from="Win/Replay" to="." method="_on_replay_pressed"]
+[connection signal="pressed" from="Win/Menu" to="." method="_on_menu_pressed"]

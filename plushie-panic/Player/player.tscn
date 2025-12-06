@@ -14,7 +14,7 @@
 [ext_resource type="Resource" uid="uid://c8c6goabtll2l" path="res://Weapons/Weapon Resources/Necklace.tres" id="5_hshwv"]
 [ext_resource type="PackedScene" uid="uid://brhnunwd7rpex" path="res://Weapons/Scrapped/Push/push_weapon.tscn" id="5_k53q1"]
 [ext_resource type="Texture2D" uid="uid://cjs34dqcuptug" path="res://Sprites/UI Stuff/EXPBar/EXPBARPROGress.png" id="6_lfmf2"]
-[ext_resource type="Resource" uid="uid://b40vbgywdc1ri" path="res://Weapons/Weapon Resources/Scissors.tres" id="6_qemgg"]
+[ext_resource type="Resource" uid="uid://fvnna4p1xs7j" path="res://Weapons/Weapon Resources/Scissors.tres" id="6_qemgg"]
 [ext_resource type="Script" uid="uid://b7foi6r3t86kj" path="res://Player/options.gd" id="7_dkpta"]
 [ext_resource type="Resource" uid="uid://bsqrd0dllriui" path="res://Items/Yarn.tres" id="8_8mwp6"]
 [ext_resource type="Script" uid="uid://dl0bd1ns1l83b" path="res://Player/player_animations.gd" id="8_od3ui"]

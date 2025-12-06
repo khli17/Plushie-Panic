@@ -1,11 +1,12 @@
 extends BaseEnemy
 
 func _ready():
+	super._ready()
 	health = 15;
 	damage = 4
-	speed = 75
+	speed = 65
 	%CatAnimations.play_walk()
-	super._ready()
+	
 
 #flips bunny to face player
 func update_sprite_direction():

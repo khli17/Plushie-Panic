@@ -2,11 +2,15 @@ extends CharacterBody2D
 class_name BaseEnemy
 
 var damage_popup_node = preload("res://damage.tscn")
+@export var is_boss: bool = false
 var health : float:
 	set(value):
 		health = value
 		if health <= 0:
 			await get_tree().create_timer(0.1).timeout #so the damage flash occurs before enemy dies
+			if is_boss: 
+				get_tree().paused = true
+				get_tree().current_scene.get_node("WinScreen").visible = true
 			drop_item()
 			queue_free()
 var damage = 2

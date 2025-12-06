@@ -4,6 +4,9 @@ var health : float = 100.0:
 	set(value):
 		health = max(value, 0)
 		%Health.value = value
+		
+		if health == 0:
+			die()
 var movement_speed : float = 200.0:
 	set(value):
 		movement_speed = value
@@ -20,7 +23,9 @@ var magnet : float = 0:
 	set(value):
 		magnet = value
 		%Magnet.shape.radius = 5 + value
-var growth : float = 1
+var growth : float = 1:
+	set(value):
+		growth = value
 
 var face_right : bool
 var isHurt : bool = false
@@ -44,10 +49,12 @@ var level : int = 1:
 		%Upgrades.show_option()
 		
 		#for changing xp needed depending on level
-		if level >= 3:
-			%EXP.max_value = 75
-		elif level >= 7:
+		if level >= 7:
 			%EXP.max_value = 100
+		elif level >= 3:
+			%EXP.max_value = 75
+		else: 
+			%EXP.max_value = 50
 
 func _physics_process(delta):
 	if is_instance_valid(nearest_enemy): #if nearest_enemy is not null, sotre its separation
@@ -108,9 +115,10 @@ func gain_EXP(amount):
 	
 #check EXp and increase level
 func check_EXP():
-	if EXP > %EXP.max_value:
+	while EXP >= %EXP.max_value:
 		EXP -= %EXP.max_value
 		level += 1
+		print("lvl up", EXP)
 
 
 func _on_magnet_area_entered(area):
@@ -125,3 +133,7 @@ func open_chest():
 
 func get_facing_direction() -> Vector2:
 	return Vector2(1, 0) if face_right else Vector2(-1, 0)
+	
+func die():
+	get_tree().paused = true  # freeze game
+	%LoseScreen.show()

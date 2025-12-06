@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="MultiDamagingArea" load_steps=6 format=3 uid="uid://cs5p8pfj3yu4p"]
 
 [ext_resource type="PackedScene" uid="uid://bhmomqownolly" path="res://Weapons/area_projectile.tscn" id="1_5gihj"]
-[ext_resource type="Script" uid="uid://q1g02pue00nl" path="res://Weapons/MultiDamagingArea.gd" id="2_16q5a"]
+[ext_resource type="Script" uid="uid://q1g02pue00nl" path="res://Weapons/Paint/MultiDamagingArea.gd" id="2_16q5a"]
 [ext_resource type="Texture2D" uid="uid://cssuumica88gi" path="res://Sprites/Weapons/PaintBottle.jpg" id="3_v2no6"]
 [ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="4_ypq4i"]
 [ext_resource type="Texture2D" uid="uid://cjub72hwvfxk4" path="res://Sprites/Weapons/Red.png" id="5_7435q"]

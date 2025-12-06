@@ -37,6 +37,8 @@ func add_to_player(source):
 	source.call_deferred("add_child", projectile)
 
 func update(delta):
+	clean_references()
+	
 	angle += angular_speed * delta
 	
 	for i in range(projectile_reference.size()):
@@ -77,4 +79,7 @@ func upgrade_item():
 		for i in range(extra):
 			add_to_player(projectile_reference[0].source)
 	
-	
+func clean_references():
+	for i in range(projectile_reference.size() - 1, -1, -1):
+		if !is_instance_valid(projectile_reference[i]):
+			projectile_reference.remove_at(i)

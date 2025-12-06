@@ -6,31 +6,31 @@
 
 [sub_resource type="Resource" id="Resource_beur6"]
 script = ExtResource("3_sv4ju")
-description = "x0.2 Growth"
+description = "x0.2 EXP Growth"
 growth = 0.2
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_rwpqj"]
 script = ExtResource("3_sv4ju")
-description = "x0.3 Growth"
+description = "x0.3 EXP Growth"
 growth = 0.3
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_gjk25"]
 script = ExtResource("3_sv4ju")
-description = "x0.4 Growth"
+description = "x0.4 EXP Growth"
 growth = 0.4
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_5u0q8"]
 script = ExtResource("3_sv4ju")
-description = "x0.5 Growth"
+description = "x0.5 EXP Growth"
 growth = 0.5
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
 [sub_resource type="Resource" id="Resource_y8cxt"]
 script = ExtResource("3_sv4ju")
-description = "x0.5 Growth"
+description = "x0.5 EXP Growth"
 growth = 0.5
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 

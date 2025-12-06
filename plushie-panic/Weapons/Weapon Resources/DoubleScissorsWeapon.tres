@@ -1,14 +1,16 @@
-[gd_resource type="Resource" script_class="Weapon" load_steps=4 format=3 uid="uid://rvrcw8wr8ksn"]
+[gd_resource type="Resource" script_class="ProjectileScissor" load_steps=5 format=3 uid="uid://bfisroylgcigj"]
 
-[ext_resource type="Script" uid="uid://edt55c7hcvi0" path="res://Weapons/Weapon.gd" id="1_j04fu"]
+[ext_resource type="PackedScene" uid="uid://bfstcnnvrwtyc" path="res://Weapons/Scissors/scissors_weapon.tscn" id="1_pyy4y"]
 [ext_resource type="Texture2D" uid="uid://lno53iskwgfs" path="res://Sprites/Weapons/DoubleScissor.jpg" id="2_hteno"]
+[ext_resource type="Script" uid="uid://bjf6n8bv8v27b" path="res://Weapons/Scissors/projectile_scissor.gd" id="2_o5p7d"]
 [ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="3_kya8v"]
 
 [resource]
-script = ExtResource("1_j04fu")
+script = ExtResource("2_o5p7d")
 damage = 15.0
 cooldown = 3.0
 speed = 400.0
-title = "Double Scissors"
+projectile_node = ExtResource("1_pyy4y")
+title = "DoubleScissorsWeapon"
 texture = ExtResource("2_hteno")
-metadata/_custom_type_script = "uid://edt55c7hcvi0"
+metadata/_custom_type_script = "uid://bjf6n8bv8v27b"
