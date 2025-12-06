@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Plushie Panic"
-run/main_scene="uid://bowixg3lglp5l"
+run/main_scene="uid://d1jkqc75qu1pn"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://gdmo5y47o51c"
 
