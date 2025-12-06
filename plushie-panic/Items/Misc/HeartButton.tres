@@ -5,6 +5,7 @@
 
 [resource]
 script = ExtResource("2_2gs7h")
+amount = 5
 title = "Hearty Button"
 icon = ExtResource("1_hxv61")
 description = "A cute little heart button to rejuvinate you with +20 health!"

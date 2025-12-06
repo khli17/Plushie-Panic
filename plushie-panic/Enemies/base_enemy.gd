@@ -92,7 +92,7 @@ func drop_item():
 		
 	var item = drops.pick_random()
 	if elite: #for an elite enemy
-		item = load("res://Items/ChestDrop.tres")
+		item = load("res://Items/Misc/ChestDrop.tres")
 	var item_to_drop = drop.instantiate()
 	
 	item_to_drop.type = item

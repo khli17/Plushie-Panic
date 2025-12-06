@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bhmomqownolly"]
 
-[ext_resource type="Texture2D" uid="uid://byobbqrwulf4" path="res://Sprites/Red.jpg" id="1_awxhr"]
+[ext_resource type="Texture2D" uid="uid://byobbqrwulf4" path="res://Sprites/Weapons/Red.jpg" id="1_awxhr"]
 [ext_resource type="Script" uid="uid://cxr6xger0svh8" path="res://Weapons/area_projectile.gd" id="1_o021y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_awxhr"]

@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://yp7hwemcqcle"]
+[gd_scene load_steps=12 format=3 uid="uid://yp7hwemcqcle"]
 
 [ext_resource type="Script" uid="uid://b14fdyyouuh6y" path="res://Enemies/Cat/cat_enemy.gd" id="1_h4jm3"]
 [ext_resource type="Script" uid="uid://beiuosfkiwuba" path="res://PickupResource.gd" id="2_c2yhu"]
 [ext_resource type="Texture2D" uid="uid://dbbnkpfy76x35" path="res://Sprites/Enemies/CatEnemy.png" id="2_gpp7d"]
 [ext_resource type="Resource" uid="uid://dkysxlr8rgbju" path="res://Items/greenbutton.tres" id="3_x2low"]
 [ext_resource type="Script" uid="uid://dxqqktbejqt10" path="res://Enemies/Cat/cat_animations.gd" id="3_ygjqb"]
+[ext_resource type="Texture2D" uid="uid://t6bky8myoubm" path="res://Sprites/Misc/Shadow.png" id="4_x2low"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gojb5"]
 atlas = ExtResource("2_gpp7d")
@@ -20,11 +21,6 @@ region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1yjwa"]
 animations = [{
-"frames": [],
-"loop": true,
-"name": &"elite_walk",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gojb5")
@@ -49,10 +45,17 @@ collision_mask = 2
 script = ExtResource("1_h4jm3")
 drops = Array[ExtResource("2_c2yhu")]([ExtResource("3_x2low")])
 
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(4, 4)
+scale = Vector2(1.359375, 1)
+texture = ExtResource("4_x2low")
+
 [node name="CatAnimations" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_1yjwa")
-animation = &"elite_walk"
+animation = &"walk"
+frame = 1
+frame_progress = 0.86573637
 script = ExtResource("3_ygjqb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://yp7hwemcqcle" path="res://Enemies/Cat/cat_enemy.tscn" id="3_63vqd"]
 [ext_resource type="PackedScene" uid="uid://c5uuts3mfsw66" path="res://Enemies/Rat/rat_enemy.tscn" id="4_6fq3q"]
 [ext_resource type="PackedScene" uid="uid://dygvxdpt3lauf" path="res://Enemies/Dog/dog_enemy.tscn" id="4_nrau0"]
-[ext_resource type="PackedScene" uid="uid://bny45xt1o3rhg" path="res://Enemies/bear_enemy.tscn" id="6_oibxw"]
+[ext_resource type="PackedScene" uid="uid://bny45xt1o3rhg" path="res://Enemies/Bear/bear_enemy.tscn" id="6_oibxw"]
 
 [node name="EnemySpawner" type="Node2D"]
 script = ExtResource("1_00s5r")

@@ -4,7 +4,9 @@ var health : float = 100.0:
 	set(value):
 		health = max(value, 0)
 		%Health.value = value
-var movement_speed : float = 200.0
+var movement_speed : float = 200.0:
+	set(value):
+		movement_speed = value
 var max_health : float = 100 : 
 	set(value): 
 		max_health = value
@@ -43,9 +45,9 @@ var level : int = 1:
 		
 		#for changing xp needed depending on level
 		if level >= 3:
-			%EXP.max_value = 20
+			%EXP.max_value = 75
 		elif level >= 7:
-			%EXP.max_value = 40
+			%EXP.max_value = 100
 
 func _physics_process(delta):
 	if is_instance_valid(nearest_enemy): #if nearest_enemy is not null, sotre its separation

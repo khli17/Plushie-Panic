@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bfstcnnvrwtyc"]
 
-[ext_resource type="Script" uid="uid://d1eotdu6bw32d" path="res://scissors_weapon.gd" id="1_3x8n0"]
+[ext_resource type="Script" uid="uid://d1eotdu6bw32d" path="res://Weapons/scissors_weapon.gd" id="1_3x8n0"]
 [ext_resource type="Texture2D" uid="uid://cb84glaiot8ac" path="res://Sprites/Weapons/ScissorsWeapon.png" id="2_2oh7m"]
 
 [node name="ScissorsWeapon" type="Area2D"]

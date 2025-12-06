@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://cyn8belo1ypih"]
+
+[ext_resource type="Script" uid="uid://04lll2vvrc43" path="res://Items/PassiveItem.gd" id="1_0q2yf"]
+[ext_resource type="Texture2D" uid="uid://dr7r1x2hvw6ho" path="res://Sprites/Items/BandAidItem.jpg" id="2_e1biv"]
+[ext_resource type="Script" uid="uid://b57318x5g3djv" path="res://Stats.gd" id="3_snw1g"]
+
+[sub_resource type="Resource" id="Resource_qmc2c"]
+script = ExtResource("3_snw1g")
+description = "Increases Max HP by 10"
+max_health = 10.0
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[sub_resource type="Resource" id="Resource_dfyop"]
+script = ExtResource("3_snw1g")
+description = "Increases Max HP by 15"
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[sub_resource type="Resource" id="Resource_anpft"]
+script = ExtResource("3_snw1g")
+description = "Increases Max HP by 20"
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
+[resource]
+script = ExtResource("1_0q2yf")
+upgrades = Array[ExtResource("3_snw1g")]([SubResource("Resource_qmc2c"), SubResource("Resource_dfyop"), SubResource("Resource_anpft")])
+title = "Band-Aid"
+texture = ExtResource("2_e1biv")
+metadata/_custom_type_script = "uid://04lll2vvrc43"

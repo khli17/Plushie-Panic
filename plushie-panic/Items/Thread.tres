@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="PassiveItem" load_steps=8 format=3 uid="uid://bmjmvjymtxamp"]
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=9 format=3 uid="uid://bmjmvjymtxamp"]
 
 [ext_resource type="Script" uid="uid://04lll2vvrc43" path="res://Items/PassiveItem.gd" id="1_y8cxt"]
 [ext_resource type="Texture2D" uid="uid://bffyfu21n250t" path="res://Sprites/Items/ThreadItem.jpg" id="2_top6o"]
@@ -28,9 +28,15 @@ description = "x0.5 Growth"
 growth = 0.5
 metadata/_custom_type_script = "uid://b57318x5g3djv"
 
+[sub_resource type="Resource" id="Resource_y8cxt"]
+script = ExtResource("3_sv4ju")
+description = "x0.5 Growth"
+growth = 0.5
+metadata/_custom_type_script = "uid://b57318x5g3djv"
+
 [resource]
 script = ExtResource("1_y8cxt")
-upgrades = Array[ExtResource("3_sv4ju")]([SubResource("Resource_beur6"), SubResource("Resource_rwpqj"), SubResource("Resource_gjk25"), SubResource("Resource_5u0q8")])
+upgrades = Array[ExtResource("3_sv4ju")]([SubResource("Resource_beur6"), SubResource("Resource_rwpqj"), SubResource("Resource_gjk25"), SubResource("Resource_5u0q8"), SubResource("Resource_y8cxt")])
 title = "Thread"
 texture = ExtResource("2_top6o")
 metadata/_custom_type_script = "uid://04lll2vvrc43"

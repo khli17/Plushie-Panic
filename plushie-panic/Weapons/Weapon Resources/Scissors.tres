@@ -1,9 +1,43 @@
-[gd_resource type="Resource" script_class="Weapon" load_steps=5 format=3 uid="uid://b40vbgywdc1ri"]
+[gd_resource type="Resource" script_class="Weapon" load_steps=13 format=3 uid="uid://b40vbgywdc1ri"]
 
+[ext_resource type="Resource" uid="uid://rvrcw8wr8ksn" path="res://Weapons/Weapon Resources/DoubleScissorsWeapon.tres" id="1_j3sm5"]
 [ext_resource type="PackedScene" uid="uid://bfstcnnvrwtyc" path="res://Weapons/scissors_weapon.tscn" id="1_q2b18"]
+[ext_resource type="Resource" uid="uid://c5vl2588oekk1" path="res://Items/Ribbon.tres" id="1_vl8ia"]
 [ext_resource type="Script" uid="uid://edt55c7hcvi0" path="res://Weapons/Weapon.gd" id="2_ldelu"]
 [ext_resource type="Texture2D" uid="uid://t7qa8iom83oy" path="res://Sprites/Weapons/Icons/ScissorsIcon.jpg" id="3_w55tq"]
 [ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="4_77d8v"]
+[ext_resource type="Script" uid="uid://mwx7sfwykaxf" path="res://Weapons/ScissorUpgrade.gd" id="6_j3sm5"]
+
+[sub_resource type="Resource" id="Resource_mi8hp"]
+script = ExtResource("6_j3sm5")
+speed = 5.0
+description = "+5 Speed"
+metadata/_custom_type_script = "uid://mwx7sfwykaxf"
+
+[sub_resource type="Resource" id="Resource_cjiwl"]
+script = ExtResource("6_j3sm5")
+damage = 2.0
+description = "+2 Damage"
+metadata/_custom_type_script = "uid://mwx7sfwykaxf"
+
+[sub_resource type="Resource" id="Resource_m62g6"]
+script = ExtResource("6_j3sm5")
+damage = 3.0
+description = "+3 Damage"
+metadata/_custom_type_script = "uid://mwx7sfwykaxf"
+
+[sub_resource type="Resource" id="Resource_57gao"]
+script = ExtResource("6_j3sm5")
+damage = 2.0
+description = "+2 Damage"
+metadata/_custom_type_script = "uid://mwx7sfwykaxf"
+
+[sub_resource type="Resource" id="Resource_vl8ia"]
+script = ExtResource("6_j3sm5")
+speed = 5.0
+cooldown = -0.5
+description = "-0..5 Cooldown"
+metadata/_custom_type_script = "uid://mwx7sfwykaxf"
 
 [resource]
 script = ExtResource("2_ldelu")
@@ -11,6 +45,9 @@ damage = 5.0
 cooldown = 5.0
 speed = 200.0
 projectile_node = ExtResource("1_q2b18")
+upgrades = Array[ExtResource("4_77d8v")]([SubResource("Resource_mi8hp"), SubResource("Resource_cjiwl"), SubResource("Resource_m62g6"), SubResource("Resource_57gao"), SubResource("Resource_vl8ia")])
+item_needed = ExtResource("1_vl8ia")
+evolution = ExtResource("1_j3sm5")
 title = "Scissors"
 texture = ExtResource("3_w55tq")
 metadata/_custom_type_script = "uid://edt55c7hcvi0"

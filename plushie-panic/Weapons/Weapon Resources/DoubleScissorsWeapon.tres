@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Weapon" load_steps=4 format=3 uid="uid://rvrcw8wr8ksn"]
 
 [ext_resource type="Script" uid="uid://edt55c7hcvi0" path="res://Weapons/Weapon.gd" id="1_j04fu"]
-[ext_resource type="Texture2D" uid="uid://lno53iskwgfs" path="res://Sprites/DoubleScissor.jpg" id="2_hteno"]
+[ext_resource type="Texture2D" uid="uid://lno53iskwgfs" path="res://Sprites/Weapons/DoubleScissor.jpg" id="2_hteno"]
 [ext_resource type="Script" uid="uid://ctbvpugtuvly8" path="res://Weapons/Upgrade.gd" id="3_kya8v"]
 
 [resource]
