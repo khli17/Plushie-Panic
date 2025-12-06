@@ -1,7 +1,9 @@
 extends Control
 
 func _ready():
+	get_tree().paused = false
 	menu()
+	AudioManager.play_menu_music()
 
 func _on_play_pressed() -> void:
 	get_tree().change_scene_to_file("res://game.tscn")

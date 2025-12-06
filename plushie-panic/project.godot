@@ -15,6 +15,10 @@ run/main_scene="uid://bowixg3lglp5l"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://gdmo5y47o51c"
 
+[autoload]
+
+AudioManager="*res://Audio/AudioManager.gd"
+
 [display]
 
 window/size/viewport_width=1280

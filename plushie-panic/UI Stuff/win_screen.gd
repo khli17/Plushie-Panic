@@ -10,3 +10,4 @@ func _on_menu_pressed() -> void:
 func win():
 	get_tree().paused = false
 	$Win.show()
+	AudioManager.play_win_jingle()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=4 uid="uid://bowixg3lglp5l"]
+[gd_scene load_steps=11 format=4 uid="uid://bowixg3lglp5l"]
 
 [ext_resource type="PackedScene" uid="uid://dr8go2x25b0sh" path="res://Player/player.tscn" id="1_80nbo"]
 [ext_resource type="Texture2D" uid="uid://3fvw2dqrys22" path="res://Sprites/Tilseset/zeo254-tileset.png" id="1_fc0e3"]
+[ext_resource type="Script" uid="uid://la7j78e14xe" path="res://game.gd" id="1_ryrav"]
 [ext_resource type="PackedScene" uid="uid://bm8wwfito3q3y" path="res://Enemies/enemy_spawner.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://2yylyk85w7vu" path="res://UI Stuff/lose_screen.tscn" id="4_7jktm"]
 [ext_resource type="PackedScene" uid="uid://dwf0gqhiqbcnd" path="res://UI Stuff/win_screen.tscn" id="4_fc0e3"]
@@ -320,6 +321,7 @@ physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_fc0e3")
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_ryrav")
 
 [node name="Parallax2D" type="Parallax2D" parent="."]
 repeat_size = Vector2(3744, 1856)
@@ -355,7 +357,6 @@ player = NodePath("../Player")
 unique_name_in_owner = true
 visible = false
 
-[node name="WinScreen" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_fc0e3")]
+[node name="WinScreen" parent="." instance=ExtResource("4_fc0e3")]
 unique_name_in_owner = true
 visible = false
-player = NodePath("../Player")
