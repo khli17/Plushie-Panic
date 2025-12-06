@@ -34,7 +34,12 @@ func play_bg_music():
 	play_music(bg_music)
 
 func play_win_jingle():
+	stop_music()
 	play_sfx(win_jingle)
 
 func play_lose_jingle():
+	stop_music()
 	play_sfx(lose_jingle)
+
+func stop_music():
+	music_player.stop()
