@@ -4,7 +4,7 @@ func _ready():
 	super._ready()
 	health = 20;
 	damage = 5
-	speed = 80
+	speed = 90
 	%DogAnimations.play_walk()
 	
 

@@ -5,7 +5,7 @@ func _ready():
 	
 	health = 500;
 	damage = 15
-	speed = 75
+	speed = 85
 	is_boss = true
 	
 	%BearAnimations. play_walk()
