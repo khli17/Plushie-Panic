@@ -6,6 +6,7 @@ func _ready():
 	AudioManager.play_menu_music()
 
 func _on_play_pressed() -> void:
+	AudioManager.play_bg_music()
 	get_tree().change_scene_to_file("res://game.tscn")
 
 

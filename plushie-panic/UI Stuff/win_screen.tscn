@@ -23,6 +23,7 @@ shadow_offset = Vector2(2, 2)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_luvg0"]
 
 [node name="WinScreen" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_vq2fd")
 
 [node name="Win" type="Panel" parent="."]

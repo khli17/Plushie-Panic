@@ -11,6 +11,7 @@ var health : float:
 			if is_boss: 
 				get_tree().paused = true
 				get_tree().current_scene.get_node("WinScreen").visible = true
+				AudioManager.play_win_jingle()
 			drop_item()
 			queue_free()
 var damage = 2

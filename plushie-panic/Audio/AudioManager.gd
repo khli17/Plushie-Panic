@@ -9,6 +9,8 @@ var music_player: AudioStreamPlayer
 var sfx_player: AudioStreamPlayer
 
 func _ready():
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 	music_player = AudioStreamPlayer.new()
 	sfx_player = AudioStreamPlayer.new()
 	

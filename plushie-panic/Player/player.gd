@@ -137,3 +137,4 @@ func get_facing_direction() -> Vector2:
 func die():
 	get_tree().paused = true  # freeze game
 	%LoseScreen.show()
+	AudioManager.play_lose_jingle()

@@ -3,4 +3,4 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	AudioManager.play_bg_music()
+	get_tree().paused = false 
