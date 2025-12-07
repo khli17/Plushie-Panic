@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://j4rq8oc7jjhy"]
 
-[ext_resource type="Texture2D" uid="uid://s5dt6mtvsfns" path="res://Sprites/Weapons/spr_needle.png" id="1_1xq2s"]
+[ext_resource type="Texture2D" uid="uid://s5dt6mtvsfns" path="res://Sprites/Weapons/Needle.png" id="1_1xq2s"]
 [ext_resource type="Script" uid="uid://br2qgrilh57mc" path="res://Weapons/Needle/needle_weapon.gd" id="1_fkj8w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fkj8w"]
